@@ -23,8 +23,8 @@ export default function LegalPage() {
               <li><strong className="text-[#1F492E]">Raison sociale :</strong> Poulzz SUARL</li>
               <li><strong className="text-[#1F492E]">Forme juridique :</strong> Societe Unipersonnelle a Responsabilite Limitee</li>
               <li><strong className="text-[#1F492E]">Siege social :</strong> Dakar, Senegal</li>
-              <li><strong className="text-[#1F492E]">NINEA :</strong> [a completer]</li>
-              <li><strong className="text-[#1F492E]">RC :</strong> [a completer]</li>
+              <li><strong className="text-[#1F492E]">NINEA :</strong> 012814647</li>
+              <li><strong className="text-[#1F492E]">RC :</strong> SN DKR 2026 B 5030</li>
               <li><strong className="text-[#1F492E]">Email :</strong> contact@poulzz.com</li>
               <li><strong className="text-[#1F492E]">Telephone :</strong> +221 76 295 70 97</li>
             </ul>

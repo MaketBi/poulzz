@@ -165,8 +165,8 @@ export default function AboutPage() {
             <div className="space-y-2 text-gray-600 text-sm">
               <p className="font-medium text-gray-900">Poulzz SUARL</p>
               <p>Dakar, Senegal</p>
-              <p>NINEA : [a completer]</p>
-              <p>RC : [a completer]</p>
+              <p>NINEA : 012814647</p>
+              <p>RC : SN DKR 2026 B 5030</p>
             </div>
           </div>
         </div>

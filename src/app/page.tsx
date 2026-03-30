@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Truck, GraduationCap } from "lucide-react";
 import {
   useScrollAnimation,
@@ -64,8 +65,17 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {/* Yonima Card */}
             <div className="bg-white rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
-              <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-[#31CC71]/10 mb-6">
-                <Truck className="w-6 h-6 text-[#1F492E]" />
+              <div className="flex items-center gap-4 mb-6">
+                <Image
+                  src="/images/app-yonima-plus.png"
+                  alt="Yonima Plus"
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 rounded-2xl object-contain"
+                />
+                <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-[#31CC71]/10">
+                  <Truck className="w-6 h-6 text-[#1F492E]" />
+                </div>
               </div>
               <h3 className="text-2xl font-bold text-[#1F492E]">
                 Yonima — La livraison r&eacute;invent&eacute;e

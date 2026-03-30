@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, MapPin, CreditCard, BarChart3, Route, Package, TrendingUp } from "lucide-react";
 
 const apps = [
@@ -22,6 +23,7 @@ const apps = [
       },
     ],
     bgColor: "bg-[#EED6A4]/30",
+    image: "/images/app-yonima-plus.png",
     storeLinks: {
       appStore: "#",
       playStore: "#",
@@ -47,6 +49,7 @@ const apps = [
       },
     ],
     bgColor: "bg-[#31CC71]/10",
+    image: "/images/app-yonima-rider.png",
     storeLinks: {
       appStore: "#",
       playStore: "#",
@@ -72,6 +75,7 @@ const apps = [
       },
     ],
     bgColor: "bg-[#1F492E]/5",
+    image: "/images/app-yonima-vendeur.png",
     storeLinks: {
       appStore: "#",
       playStore: "#",
@@ -206,13 +210,15 @@ export default function AppsPage() {
                 </div>
               </div>
 
-              {/* Image Placeholder */}
+              {/* App Icon */}
               <div className={`${app.bgColor} rounded-3xl aspect-square flex items-center justify-center ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                <div className="w-48 h-48 rounded-3xl bg-white/50 flex items-center justify-center shadow-lg">
-                  <span className="text-6xl font-bold text-[#1F492E]/20">
-                    {app.name.split(" ")[1][0]}
-                  </span>
-                </div>
+                <Image
+                  src={app.image}
+                  alt={app.name}
+                  width={400}
+                  height={400}
+                  className="w-64 h-64 lg:w-80 lg:h-80 object-contain"
+                />
               </div>
             </div>
           </div>
