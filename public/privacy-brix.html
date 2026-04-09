@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Règles de confidentialité — Brix</title>
+<meta name="description" content="Politique de confidentialité de l'application Brix — suivi de chantier.">
+<meta name="robots" content="index, follow">
+<style>
+  :root {
+    --bg: #F9F9FC;
+    --surface: #FFFFFF;
+    --text: #1A1C1E;
+    --muted: #797588;
+    --primary: #6C47FF;
+    --primary-light: #EEEBFF;
+    --border: #E8E8EB;
+    --danger: #DC2626;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0F0F14;
+      --surface: #1A1A22;
+      --text: #F5F5F7;
+      --muted: #9B98A8;
+      --primary: #9078FF;
+      --primary-light: #2A2344;
+      --border: #2A2A35;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  header.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 800;
+    font-size: 24px;
+    font-family: -apple-system, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  }
+  .brand-name {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .brand-tag {
+    color: var(--muted);
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 4px;
+    line-height: 1.15;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 32px;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 40px 0 12px;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 0 6px;
+    color: var(--text);
+  }
+  p, li {
+    color: var(--text);
+    margin: 8px 0;
+  }
+  strong { font-weight: 600; }
+  ul {
+    padding-left: 22px;
+    margin: 10px 0 14px;
+  }
+  ul li {
+    margin: 4px 0;
+  }
+  a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin: 16px 0;
+  }
+  .card p { margin: 2px 0; }
+  .note {
+    border-left: 3px solid var(--primary);
+    padding: 14px 18px;
+    background: var(--primary-light);
+    border-radius: 0 12px 12px 0;
+    font-size: 14px;
+    margin: 20px 0;
+  }
+  .note strong { color: var(--primary); }
+  .warn {
+    border-left: 3px solid var(--danger);
+    padding: 14px 18px;
+    background: rgba(220, 38, 38, 0.08);
+    border-radius: 0 12px 12px 0;
+    font-size: 14px;
+    margin: 16px 0;
+  }
+  .warn strong { color: var(--danger); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin: 24px 0 32px;
+  }
+  .toc-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+  .toc ol {
+    margin: 0;
+    padding-left: 22px;
+    column-count: 2;
+    column-gap: 24px;
+  }
+  .toc li {
+    break-inside: avoid;
+    padding: 3px 0;
+  }
+  @media (max-width: 560px) {
+    .toc ol { column-count: 1; }
+    h1 { font-size: 26px; }
+    .container { padding: 28px 18px 60px; }
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  footer p { margin: 4px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="brand">
+  <div class="logo">B</div>
+  <div>
+    <div class="brand-name">Brix</div>
+    <div class="brand-tag">Suivi de chantier</div>
+  </div>
+</header>
+
+<h1>Règles de confidentialité</h1>
+<p class="subtitle">Dernière mise à jour : 9 avril 2026 · Version 1.0</p>
+
+<div class="note">
+<strong>En résumé :</strong> Brix collecte votre numéro de téléphone, votre nom, vos dépenses de chantier et certaines données techniques afin de vous fournir un outil de suivi de chantier partagé. Vos données ne sont jamais vendues ni utilisées à des fins publicitaires. Vous pouvez demander leur suppression à tout moment.
+</div>
+
+<div class="toc">
+  <div class="toc-title">Sommaire</div>
+  <ol>
+    <li><a href="#responsable">Responsable du traitement</a></li>
+    <li><a href="#donnees">Données collectées</a></li>
+    <li><a href="#finalites">Finalités</a></li>
+    <li><a href="#base-legale">Base légale</a></li>
+    <li><a href="#partage">Partage de vos données</a></li>
+    <li><a href="#conservation">Durée de conservation</a></li>
+    <li><a href="#droits">Vos droits</a></li>
+    <li><a href="#securite">Sécurité</a></li>
+    <li><a href="#transferts">Transferts internationaux</a></li>
+    <li><a href="#mineurs">Enfants mineurs</a></li>
+    <li><a href="#cookies">Cookies et traceurs</a></li>
+    <li><a href="#modifications">Modifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</div>
+
+<h2 id="responsable">1. Responsable du traitement</h2>
+<p>L'application <strong>Brix</strong> est éditée par :</p>
+<div class="card">
+  <p><strong>POULZZ SUARL</strong></p>
+  <p>Bène Baraque Quartier Ainoumady 2, Pikine, Dakar</p>
+  <p>Sénégal</p>
+  <p>Email : <a href="mailto:contact@poulzz.com">contact@poulzz.com</a></p>
+  <p>WhatsApp : <a href="https://wa.me/221777433516">+221 77 743 35 16</a></p>
+</div>
+<p>Pour toute question relative à vos données personnelles, vous pouvez contacter le responsable du traitement par email ou WhatsApp à l'adresse indiquée ci-dessus.</p>
+
+<h2 id="donnees">2. Quelles données nous collectons</h2>
+
+<h3>2.1 Données que vous nous fournissez directement</h3>
+<ul>
+  <li><strong>Numéro de téléphone</strong> — utilisé pour l'authentification par code OTP envoyé via WhatsApp (ou SMS en secours).</li>
+  <li><strong>Nom et prénom</strong> — pour vous identifier dans l'application et afficher qui a saisi chaque information.</li>
+  <li><strong>Photo de profil</strong> — si vous choisissez d'en ajouter une.</li>
+  <li><strong>Dépenses de chantier</strong> — montants, catégories, bénéficiaires, dates, notes, quantités.</li>
+  <li><strong>Photos de justificatifs</strong> — images associées à vos dépenses (factures, reçus).</li>
+  <li><strong>Documents et médias</strong> — fichiers (plans, photos, vidéos, PDF, documents administratifs) que vous ajoutez à la galerie du chantier.</li>
+</ul>
+
+<h3>2.2 Données collectées automatiquement</h3>
+<ul>
+  <li><strong>Coordonnées GPS silencieuses</strong> — lors de la saisie d'une dépense, Brix enregistre automatiquement votre position approximative (latitude, longitude) à titre d'audit. Cette collecte n'est effectuée que si vous avez accordé la permission de localisation dans les réglages de votre téléphone.</li>
+  <li><strong>Identifiant technique de l'appareil</strong> — un jeton push (Firebase Cloud Messaging) est stocké pour vous envoyer des notifications. Ce jeton n'identifie pas votre identité réelle.</li>
+  <li><strong>Journaux serveur</strong> — adresse IP, date et heure d'utilisation, type de requête, afin d'assurer la sécurité du service.</li>
+</ul>
+
+<div class="warn">
+<strong>Important sur la géolocalisation :</strong> Brix utilise la position uniquement au moment exact où vous enregistrez une dépense. L'application ne suit pas votre position en arrière-plan et ne trace pas vos déplacements. Vous pouvez révoquer la permission à tout moment depuis les paramètres Android.
+</div>
+
+<h2 id="finalites">3. À quoi servent vos données</h2>
+<p>Nous traitons vos données uniquement pour les finalités suivantes :</p>
+<ul>
+  <li>Vous authentifier et gérer votre compte utilisateur</li>
+  <li>Vous permettre de saisir et consulter les dépenses, photos, documents, phases et budgets d'un chantier</li>
+  <li>Partager ces données entre les membres autorisés du même chantier (administrateur, terrain, lecteur)</li>
+  <li>Envoyer les notifications liées aux événements du chantier (nouvelle dépense, solde bas, virement reçu)</li>
+  <li>Assurer la sécurité du service et détecter d'éventuels abus</li>
+  <li>Respecter nos obligations légales (conservation comptable, réquisitions judiciaires)</li>
+</ul>
+<p><strong>Nous n'utilisons jamais vos données pour de la publicité ciblée, du profilage commercial ou du scoring bancaire.</strong></p>
+
+<h2 id="base-legale">4. Base légale du traitement</h2>
+<p>Conformément à la loi sénégalaise n° 2008-12 sur la protection des données personnelles et aux principes du RGPD, nos traitements reposent sur :</p>
+<ul>
+  <li><strong>L'exécution du contrat</strong> qui nous lie à vous (fourniture du service Brix) pour les données strictement nécessaires au fonctionnement.</li>
+  <li><strong>Votre consentement</strong> pour les notifications et la géolocalisation, révocable à tout moment.</li>
+  <li><strong>Nos obligations légales</strong> pour la conservation des données financières.</li>
+  <li><strong>Notre intérêt légitime</strong> pour les journaux de sécurité.</li>
+</ul>
+
+<h2 id="partage">5. Partage de vos données</h2>
+<p>Vos données peuvent être partagées dans les cas suivants, et uniquement ceux-là :</p>
+
+<h3>5.1 Sous-traitants techniques</h3>
+<p>Nous utilisons des prestataires qui traitent les données pour notre compte, dans le cadre strict de la fourniture du service :</p>
+<table>
+  <thead>
+    <tr>
+      <th>Prestataire</th>
+      <th>Rôle</th>
+      <th>Politique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Supabase Inc.</td>
+      <td>Base de données, authentification, stockage des fichiers</td>
+      <td><a href="https://supabase.com/privacy">Voir</a></td>
+    </tr>
+    <tr>
+      <td>WasendAPI</td>
+      <td>Envoi des codes OTP WhatsApp</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Africa's Talking</td>
+      <td>Envoi des SMS de secours</td>
+      <td><a href="https://africastalking.com/privacy">Voir</a></td>
+    </tr>
+    <tr>
+      <td>Google Firebase</td>
+      <td>Notifications push Android</td>
+      <td><a href="https://firebase.google.com/support/privacy">Voir</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>5.2 Autres membres de votre chantier</h3>
+<p>Les dépenses, photos et documents que vous saisissez sont visibles par les autres utilisateurs rattachés au même chantier (administrateur, terrain, lecteur). C'est le principe même du service de collaboration.</p>
+
+<h3>5.3 Autorités compétentes</h3>
+<p>Nous pouvons divulguer vos données à la demande d'une autorité judiciaire ou administrative sénégalaise compétente, dans le respect de la loi applicable.</p>
+
+<p><strong>Nous ne vendons jamais vos données personnelles à des tiers.</strong></p>
+
+<h2 id="conservation">6. Durée de conservation</h2>
+<p>Nous conservons vos données pendant toute la durée d'utilisation du service, et jusqu'à <strong>douze (12) mois</strong> après la suppression de votre compte ou la clôture d'un chantier, sauf si :</p>
+<ul>
+  <li>la loi comptable ou fiscale sénégalaise nous impose une conservation plus longue (généralement 10 ans pour les documents comptables) ;</li>
+  <li>une procédure judiciaire en cours exige leur conservation.</li>
+</ul>
+<p>Les journaux de sécurité sont conservés au maximum 12 mois.</p>
+
+<h2 id="droits">7. Vos droits</h2>
+<p>Conformément à la loi sénégalaise n° 2008-12 et au RGPD, vous disposez des droits suivants sur vos données personnelles :</p>
+<ul>
+  <li><strong>Droit d'accès</strong> — obtenir une copie de vos données</li>
+  <li><strong>Droit de rectification</strong> — corriger des données inexactes</li>
+  <li><strong>Droit de suppression</strong> (« droit à l'oubli »)</li>
+  <li><strong>Droit à la limitation</strong> du traitement</li>
+  <li><strong>Droit d'opposition</strong> au traitement</li>
+  <li><strong>Droit à la portabilité</strong> — recevoir vos données dans un format structuré</li>
+  <li><strong>Droit de retirer votre consentement</strong> à tout moment</li>
+</ul>
+<p>Pour exercer ces droits, écrivez à <a href="mailto:contact@poulzz.com">contact@poulzz.com</a> ou par WhatsApp au <a href="https://wa.me/221777433516">+221 77 743 35 16</a>. Nous vous répondrons dans un délai maximum de 30 jours.</p>
+
+<p>Vous avez également le droit d'introduire une réclamation auprès de la <strong>Commission de Protection des Données Personnelles (CDP)</strong> du Sénégal : <a href="https://www.cdp.sn">www.cdp.sn</a>.</p>
+
+<h2 id="securite">8. Sécurité de vos données</h2>
+<p>Nous prenons des mesures techniques et organisationnelles pour protéger vos données :</p>
+<ul>
+  <li>Chiffrement en transit (HTTPS / TLS) entre votre téléphone et nos serveurs</li>
+  <li>Authentification forte par code OTP WhatsApp</li>
+  <li>Séparation stricte des rôles (Row-Level Security Postgres) pour que chaque utilisateur ne voie que les données de son chantier</li>
+  <li>Stockage des fichiers dans des buckets privés, accessibles uniquement via des URL signées temporaires</li>
+  <li>Sauvegardes régulières de la base de données</li>
+  <li>Mise à jour régulière des dépendances logicielles</li>
+</ul>
+
+<h2 id="transferts">9. Transferts internationaux</h2>
+<p>Nos prestataires techniques (Supabase, Firebase) peuvent traiter les données sur des serveurs situés hors du Sénégal, notamment en Union européenne ou aux États-Unis. Ces transferts sont encadrés par les garanties appropriées (clauses contractuelles types, certifications du prestataire).</p>
+
+<h2 id="mineurs">10. Enfants mineurs</h2>
+<p>Brix n'est pas destiné aux enfants de moins de 16 ans. Nous ne collectons pas sciemment les données d'un mineur. Si vous pensez qu'un enfant nous a fourni ses données, contactez-nous pour que nous les supprimions.</p>
+
+<h2 id="cookies">11. Cookies et traceurs</h2>
+<p>L'application mobile Brix n'utilise <strong>pas de cookies</strong>. Elle stocke uniquement des données techniques locales nécessaires à son fonctionnement (session de connexion, préférences utilisateur) dans le stockage privé de l'application.</p>
+<p>Cette page web de politique de confidentialité n'utilise aucun cookie ni traceur tiers.</p>
+
+<h2 id="modifications">12. Modifications de ces règles</h2>
+<p>Nous pouvons mettre à jour ces règles de confidentialité à tout moment pour refléter une évolution du service ou une obligation légale. La version applicable est celle affichée à l'adresse publique de cette page. En cas de modification substantielle, nous vous en informerons par notification dans l'application.</p>
+
+<h2 id="contact">13. Contact</h2>
+<p>Pour toute question sur ces règles ou pour exercer vos droits :</p>
+<div class="card">
+  <p><strong>Email</strong> : <a href="mailto:contact@poulzz.com">contact@poulzz.com</a></p>
+  <p><strong>WhatsApp</strong> : <a href="https://wa.me/221777433516">+221 77 743 35 16</a></p>
+</div>
+
+<footer>
+<p>Brix — Application de suivi de chantier</p>
+<p>Version du document : 9 avril 2026</p>
+</footer>
+
+</div>
+</body>
+</html>
