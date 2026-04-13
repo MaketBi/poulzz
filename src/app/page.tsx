@@ -7,9 +7,9 @@ import {
   useScrollAnimation,
   useCounterAnimation,
 } from "@/hooks/useScrollAnimation";
+import TubesCursor from "@/components/ui/tubes-cursor";
 
 export default function HomePage() {
-  const heroRef = useScrollAnimation();
   const productsRef = useScrollAnimation();
   const statsRef = useScrollAnimation();
   const visionRef = useScrollAnimation();
@@ -22,38 +22,48 @@ export default function HomePage() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section
-        ref={heroRef}
-        className="fade-in-section pt-28 lg:pt-32"
+      {/* Hero Section — Tubes Canvas Background */}
+      <TubesCursor
+        tubeColors={["#D4500A", "#31CC71", "#E8A020"]}
+        lightColors={["#31CC71", "#D4500A", "#F5F1EB", "#E8A020"]}
+        lightIntensity={180}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#1F492E]">
-              La tech s&eacute;n&eacute;galaise qui simplifie votre quotidien
-            </h1>
-            <p className="mt-6 text-lg text-[#1F492E]/60 max-w-xl">
-              Un &eacute;cosyst&egrave;me de solutions num&eacute;riques
-              con&ccedil;ues au S&eacute;n&eacute;gal, pour le
-              S&eacute;n&eacute;gal.
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="max-w-2xl pl-0 md:pl-[4vw]">
+            <p className="text-sm font-medium tracking-widest text-white/50 uppercase mb-4">
+              Poulzz SUARL — Dakar, S&eacute;n&eacute;gal
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row items-start gap-4">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter leading-none text-white">
+              La tech qui construit
+              <br />
+              <span className="text-[#31CC71]">le S&eacute;n&eacute;gal de demain</span>
+            </h1>
+            <p className="mt-6 text-lg text-white/60 leading-relaxed max-w-[55ch]">
+              Des solutions num&eacute;riques pens&eacute;es ici, pour ici.
+              Commerce, livraison, &eacute;ducation — un &eacute;cosyst&egrave;me
+              adapt&eacute; aux r&eacute;alit&eacute;s locales.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
               <Link
                 href="#produits"
-                className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-[#D4500A] rounded-full hover:bg-[#B8440A] transition-colors"
+                className="inline-flex items-center justify-center px-7 py-3.5 text-base font-semibold text-zinc-950 bg-[#31CC71] rounded-full hover:bg-[#28b862] active:scale-[0.98] transition-all duration-200"
               >
                 D&eacute;couvrir nos produits
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-[#1F492E] border border-[#1F492E] rounded-full hover:bg-[#1F492E]/5 transition-colors"
+                className="inline-flex items-center justify-center px-7 py-3.5 text-base font-medium text-white border border-white/20 rounded-full hover:bg-white/10 active:scale-[0.98] transition-all duration-200"
               >
                 Nous contacter
               </Link>
             </div>
+            <p className="mt-6 text-xs text-white/30">
+              Cliquez sur l&apos;arri&egrave;re-plan pour changer les couleurs
+            </p>
           </div>
         </div>
-      </section>
+      </TubesCursor>
 
       {/* Product Cards Section */}
       <section
