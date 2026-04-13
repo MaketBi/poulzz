@@ -26,7 +26,7 @@ const apps = [
     image: "/images/app-yonima-plus.png",
     storeLinks: {
       appStore: "#",
-      playStore: "#",
+      playStore: "https://play.google.com/store/apps/details?id=com.poulzz.yonima.client&pcampaignid=web_share",
     },
   },
   {
@@ -191,6 +191,8 @@ export default function AppsPage() {
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a
                     href={app.storeLinks.appStore}
+                    target={app.storeLinks.appStore !== "#" ? "_blank" : undefined}
+                    rel={app.storeLinks.appStore !== "#" ? "noopener noreferrer" : undefined}
                     className="inline-flex items-center gap-2 px-4 py-2 bg-[#1F492E] text-white text-sm font-medium rounded-lg hover:bg-[#1F492E]/90 transition-colors cursor-pointer"
                   >
                     <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
@@ -200,6 +202,8 @@ export default function AppsPage() {
                   </a>
                   <a
                     href={app.storeLinks.playStore}
+                    target={app.storeLinks.playStore !== "#" ? "_blank" : undefined}
+                    rel={app.storeLinks.playStore !== "#" ? "noopener noreferrer" : undefined}
                     className="inline-flex items-center gap-2 px-4 py-2 bg-[#1F492E] text-white text-sm font-medium rounded-lg hover:bg-[#1F492E]/90 transition-colors cursor-pointer"
                   >
                     <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
