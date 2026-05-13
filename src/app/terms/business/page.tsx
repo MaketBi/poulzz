@@ -17,8 +17,32 @@ export default function TermsBusinessPage() {
         { href: "/terms/client", label: "CGU/CGV - Yonima Plus (Client)" },
         { href: "/terms/rider", label: "CGU - Yonima Rider (Livreur)" },
       ]}
+      tableOfContents={[
+        { id: "preambule", label: "Preambule" },
+        { id: "chapitre-1", label: "1. Definitions" },
+        { id: "chapitre-2", label: "2. Acceptation, conclusion et duree du contrat" },
+        { id: "chapitre-3", label: "3. Creation et gestion du compte Vendeur" },
+        { id: "chapitre-4", label: "4. Catalogue et gestion des produits" },
+        { id: "chapitre-5", label: "5. Commandes" },
+        { id: "chapitre-6", label: "6. Mode de livraison" },
+        { id: "chapitre-7", label: "7. Prix et facturation" },
+        { id: "chapitre-8", label: "8. Encaissement et versement" },
+        { id: "chapitre-9", label: "9. Obligations du Vendeur" },
+        { id: "chapitre-10", label: "10. Obligations de Yonima" },
+        { id: "chapitre-11", label: "11. Notations et avis Client" },
+        { id: "chapitre-12", label: "12. Sponsorings et mises en avant payantes" },
+        { id: "chapitre-13", label: "13. Programme de fidelite" },
+        { id: "chapitre-14", label: "14. Propriete intellectuelle" },
+        { id: "chapitre-15", label: "15. Protection des donnees personnelles" },
+        { id: "chapitre-16", label: "16. Sanctions et resiliation pour faute" },
+        { id: "chapitre-17", label: "17. Responsabilite" },
+        { id: "chapitre-18", label: "18. Force majeure" },
+        { id: "chapitre-19", label: "19. Litiges et droit applicable" },
+        { id: "chapitre-20", label: "20. Dispositions generales" },
+        { id: "chapitre-21", label: "21. Contact" },
+      ]}
     >
-      <h2>Preambule</h2>
+      <h2 id="preambule">Preambule</h2>
       <p>
         Les presentes Conditions Generales d&apos;Utilisation et Contrat de
         Referencement (ci-apres les &laquo; <strong>CGU Business</strong>{" "}
@@ -40,7 +64,7 @@ export default function TermsBusinessPage() {
         referencement.
       </p>
 
-      <h2>1. Definitions</h2>
+      <h2 id="chapitre-1">1. Definitions</h2>
       <ul>
         <li><strong>Application Business</strong> : application mobile destinee a la gestion d&apos;un compte vendor sur la Plateforme Yonima.</li>
         <li><strong>Plateforme</strong> : ensemble Yonima Plus (application Client) + Yonima Business (application Vendeur) + Yonima Rider (application Livreur).</li>
@@ -53,7 +77,7 @@ export default function TermsBusinessPage() {
         <li><strong>Versement</strong> : reversement periodique au Vendeur des sommes encaissees par la Plateforme, deduction faite des commissions.</li>
       </ul>
 
-      <h2>2. Acceptation, conclusion et duree du contrat</h2>
+      <h2 id="chapitre-2">2. Acceptation, conclusion et duree du contrat</h2>
 
       <h3>2.1. Conclusion</h3>
       <p>
@@ -79,7 +103,7 @@ export default function TermsBusinessPage() {
         Le Vendeur qui refuse peut resilier sans frais.
       </p>
 
-      <h2>3. Creation et gestion du compte Vendeur</h2>
+      <h2 id="chapitre-3">3. Creation et gestion du compte Vendeur</h2>
 
       <h3>3.1. Conditions d&apos;eligibilite</h3>
       <p>Pour etre reference sur la Plateforme, le Vendeur doit :</p>
@@ -129,7 +153,7 @@ export default function TermsBusinessPage() {
         <li>Effacement des donnees de profil non comptables sous 30 jours</li>
       </ul>
 
-      <h2>4. Catalogue et gestion des produits</h2>
+      <h2 id="chapitre-4">4. Catalogue et gestion des produits</h2>
 
       <h3>4.1. Contenu publie</h3>
       <p>
@@ -173,7 +197,7 @@ export default function TermsBusinessPage() {
         un produit en cas d&apos;erreur manifeste.
       </p>
 
-      <h2>5. Commandes</h2>
+      <h2 id="chapitre-5">5. Commandes</h2>
 
       <h3>5.1. Reception et delai d&apos;acceptation</h3>
       <p>
@@ -212,7 +236,7 @@ export default function TermsBusinessPage() {
         automatiquement les nouvelles Commandes vers ce Vendeur.
       </p>
 
-      <h2>6. Mode de livraison</h2>
+      <h2 id="chapitre-6">6. Mode de livraison</h2>
 
       <h3>6.1. Modes disponibles</h3>
       <p>Le Vendeur choisit son mode de livraison :</p>
@@ -240,7 +264,7 @@ export default function TermsBusinessPage() {
         <code>accepts_cash</code> est automatiquement desactive.
       </p>
 
-      <h2>7. Prix et facturation</h2>
+      <h2 id="chapitre-7">7. Prix et facturation</h2>
 
       <h3>7.1. Politique tarifaire</h3>
       <p>
@@ -269,7 +293,7 @@ export default function TermsBusinessPage() {
         et reverses selon les modalites de l&apos;article 8.
       </p>
 
-      <h2>8. Encaissement et versement</h2>
+      <h2 id="chapitre-8">8. Encaissement et versement</h2>
 
       <h3>8.1. Modalites d&apos;encaissement</h3>
       <table>
@@ -321,7 +345,7 @@ export default function TermsBusinessPage() {
         pour le contester par ecrit a contact@poulzz.com.
       </p>
 
-      <h2>9. Obligations du Vendeur</h2>
+      <h2 id="chapitre-9">9. Obligations du Vendeur</h2>
       <p>Le Vendeur s&apos;engage a :</p>
       <ul>
         <li>Respecter les <strong>normes d&apos;hygiene et de securite alimentaire</strong> applicables</li>
@@ -334,7 +358,7 @@ export default function TermsBusinessPage() {
         <li>Maintenir a jour ses <strong>donnees administratives</strong> (NINEA, autorisations sanitaires)</li>
       </ul>
 
-      <h2>10. Obligations de Yonima</h2>
+      <h2 id="chapitre-10">10. Obligations de Yonima</h2>
       <p>Yonima s&apos;engage a :</p>
       <ul>
         <li>Mettre a disposition une <strong>plateforme technique fiable</strong> (obligation de moyens)</li>
@@ -345,7 +369,7 @@ export default function TermsBusinessPage() {
         <li><strong>Proteger les donnees personnelles</strong> du Vendeur (cf. <a href="/privacy/business">Politique de confidentialite Business</a>)</li>
       </ul>
 
-      <h2>11. Notations et avis Client</h2>
+      <h2 id="chapitre-11">11. Notations et avis Client</h2>
 
       <h3>11.1. Systeme de notation</h3>
       <p>
@@ -375,7 +399,7 @@ export default function TermsBusinessPage() {
         V1).
       </p>
 
-      <h2>12. Sponsorings et mises en avant payantes</h2>
+      <h2 id="chapitre-12">12. Sponsorings et mises en avant payantes</h2>
       <p>
         Le Vendeur peut acheter des <strong>emplacements sponsorises</strong>{" "}
         dans les sections &laquo; Pour vous &raquo; et &laquo; Tendances
@@ -388,7 +412,7 @@ export default function TermsBusinessPage() {
         <li>Les contenus sponsorises font l&apos;objet d&apos;un suivi statistique (impressions, clics) accessible au Vendeur</li>
       </ul>
 
-      <h2>13. Programme de fidelite</h2>
+      <h2 id="chapitre-13">13. Programme de fidelite</h2>
       <p>
         Yonima opere un programme de fidelite Client (1 point par tranche de
         100 F CFA depenses). Les points sont <strong>portes par Yonima</strong>,
@@ -396,7 +420,7 @@ export default function TermsBusinessPage() {
         financiere</strong> liee au programme fidelite.
       </p>
 
-      <h2>14. Propriete intellectuelle</h2>
+      <h2 id="chapitre-14">14. Propriete intellectuelle</h2>
 
       <h3>14.1. Plateforme Yonima</h3>
       <p>
@@ -415,13 +439,13 @@ export default function TermsBusinessPage() {
         des supports promotionnels associes, pendant toute la duree du Contrat.
       </p>
 
-      <h2>15. Protection des donnees personnelles</h2>
+      <h2 id="chapitre-15">15. Protection des donnees personnelles</h2>
       <p>
         Voir{" "}
         <a href="/privacy/business">Politique de confidentialite Business</a>.
       </p>
 
-      <h2>16. Sanctions et resiliation pour faute</h2>
+      <h2 id="chapitre-16">16. Sanctions et resiliation pour faute</h2>
 
       <h3>16.1. Manquements pouvant entrainer sanction</h3>
       <ul>
@@ -458,7 +482,7 @@ export default function TermsBusinessPage() {
         <li>Conservation des donnees comptables pendant la duree legale</li>
       </ul>
 
-      <h2>17. Responsabilite</h2>
+      <h2 id="chapitre-17">17. Responsabilite</h2>
 
       <h3>17.1. Responsabilite de Yonima</h3>
       <p>
@@ -490,10 +514,10 @@ export default function TermsBusinessPage() {
         par un Client ou un tiers en raison d&apos;un manquement du Vendeur.
       </p>
 
-      <h2>18. Force majeure</h2>
+      <h2 id="chapitre-18">18. Force majeure</h2>
       <p>Memes definitions que l&apos;article 17 des CGU Client.</p>
 
-      <h2>19. Litiges et droit applicable</h2>
+      <h2 id="chapitre-19">19. Litiges et droit applicable</h2>
 
       <h3>19.1. Droit applicable</h3>
       <p>Droit senegalais.</p>
@@ -511,14 +535,14 @@ export default function TermsBusinessPage() {
         contraire.
       </p>
 
-      <h2>20. Dispositions generales</h2>
+      <h2 id="chapitre-20">20. Dispositions generales</h2>
       <ul>
         <li><strong>Nullite partielle</strong> : les autres stipulations demeurent en vigueur.</li>
         <li><strong>Cession</strong> : le Vendeur ne peut ceder son compte. Yonima peut ceder ses droits avec information prealable.</li>
         <li><strong>Integralite</strong> : les presentes CGU constituent l&apos;integralite de l&apos;accord.</li>
       </ul>
 
-      <h2>21. Contact</h2>
+      <h2 id="chapitre-21">21. Contact</h2>
       <ul>
         <li>Support operations : <a href="mailto:contact@poulzz.com">contact@poulzz.com</a></li>
         <li>WhatsApp : +221 76 295 70 97</li>

@@ -17,8 +17,28 @@ export default function TermsRiderPage() {
         { href: "/terms/client", label: "CGU/CGV - Yonima Plus (Client)" },
         { href: "/terms/business", label: "CGU - Yonima Business (Vendeur)" },
       ]}
+      tableOfContents={[
+        { id: "preambule", label: "Preambule" },
+        { id: "chapitre-1", label: "1. Definitions" },
+        { id: "chapitre-2", label: "2. Statut juridique du Livreur" },
+        { id: "chapitre-3", label: "3. Conditions d'inscription" },
+        { id: "chapitre-4", label: "4. Fonctionnement des Courses" },
+        { id: "chapitre-5", label: "5. Remuneration" },
+        { id: "chapitre-6", label: "6. Obligations du Livreur" },
+        { id: "chapitre-7", label: "7. Obligations de Yonima" },
+        { id: "chapitre-8", label: "8. Sanctions et systeme de scoring" },
+        { id: "chapitre-9", label: "9. Suppression du compte" },
+        { id: "chapitre-10", label: "10. Geolocalisation et permissions systeme" },
+        { id: "chapitre-11", label: "11. Propriete intellectuelle" },
+        { id: "chapitre-12", label: "12. Protection des donnees personnelles" },
+        { id: "chapitre-13", label: "13. Responsabilite" },
+        { id: "chapitre-14", label: "14. Force majeure" },
+        { id: "chapitre-15", label: "15. Litiges et droit applicable" },
+        { id: "chapitre-16", label: "16. Dispositions generales" },
+        { id: "chapitre-17", label: "17. Contact" },
+      ]}
     >
-      <h2>Preambule</h2>
+      <h2 id="preambule">Preambule</h2>
       <p>
         Les presentes Conditions Generales d&apos;Utilisation et Contrat de
         Prestation de Services (ci-apres les &laquo; <strong>CGU Rider</strong>{" "}
@@ -46,7 +66,7 @@ export default function TermsRiderPage() {
         pour d&apos;autres plateformes.
       </p>
 
-      <h2>1. Definitions</h2>
+      <h2 id="chapitre-1">1. Definitions</h2>
       <ul>
         <li><strong>Application Rider</strong> : application mobile destinee a la gestion des courses pour les Livreurs partenaires de Yonima.</li>
         <li><strong>Plateforme</strong> : ensemble Yonima Plus + Yonima Business + Yonima Rider.</li>
@@ -59,7 +79,7 @@ export default function TermsRiderPage() {
         <li><strong>Sanctions</strong> : mesures appliquees en cas de manquement (avertissement, reduction de score, suspension temporaire, deactivation).</li>
       </ul>
 
-      <h2>2. Statut juridique du Livreur</h2>
+      <h2 id="chapitre-2">2. Statut juridique du Livreur</h2>
 
       <h3>2.1. Independance</h3>
       <p>
@@ -90,7 +110,7 @@ export default function TermsRiderPage() {
         <strong>a aucune retenue</strong> sociale ou fiscale.
       </p>
 
-      <h2>3. Conditions d&apos;inscription</h2>
+      <h2 id="chapitre-3">3. Conditions d&apos;inscription</h2>
 
       <h3>3.1. Eligibilite</h3>
       <p>Pour s&apos;inscrire comme Livreur, le candidat doit :</p>
@@ -136,7 +156,7 @@ export default function TermsRiderPage() {
         compte.
       </p>
 
-      <h2>4. Fonctionnement des Courses</h2>
+      <h2 id="chapitre-4">4. Fonctionnement des Courses</h2>
 
       <h3>4.1. Session active</h3>
       <p>
@@ -214,7 +234,7 @@ export default function TermsRiderPage() {
         <li>Suivre les instructions du support pour le devenir de la commande</li>
       </ul>
 
-      <h2>5. Remuneration</h2>
+      <h2 id="chapitre-5">5. Remuneration</h2>
 
       <h3>5.1. Calcul de la remuneration</h3>
       <p>La remuneration du Livreur par Course est composee de :</p>
@@ -269,7 +289,7 @@ export default function TermsRiderPage() {
         ecrit a contact@poulzz.com.
       </p>
 
-      <h2>6. Obligations du Livreur</h2>
+      <h2 id="chapitre-6">6. Obligations du Livreur</h2>
       <p>Le Livreur s&apos;engage a :</p>
       <ul>
         <li><strong>Respecter le Code de la route</strong> senegalais</li>
@@ -284,7 +304,7 @@ export default function TermsRiderPage() {
         <li><strong>Signaler immediatement</strong> tout incident (accident, vol, agression, panne) au support Yonima</li>
       </ul>
 
-      <h2>7. Obligations de Yonima</h2>
+      <h2 id="chapitre-7">7. Obligations de Yonima</h2>
       <p>Yonima s&apos;engage a :</p>
       <ul>
         <li>Mettre a disposition une <strong>application fiable</strong> (obligation de moyens)</li>
@@ -302,7 +322,7 @@ export default function TermsRiderPage() {
         <li>Les equipements personnels (telephone, casque, gilet hors gilet de marque Yonima quand applicable)</li>
       </ul>
 
-      <h2>8. Sanctions et systeme de scoring</h2>
+      <h2 id="chapitre-8">8. Sanctions et systeme de scoring</h2>
 
       <h3>8.1. Systeme de scoring</h3>
       <p>
@@ -359,7 +379,7 @@ export default function TermsRiderPage() {
         action judiciaire.
       </p>
 
-      <h2>9. Suppression du compte</h2>
+      <h2 id="chapitre-9">9. Suppression du compte</h2>
 
       <h3>9.1. A l&apos;initiative du Livreur</h3>
       <p>
@@ -382,7 +402,7 @@ export default function TermsRiderPage() {
         <strong>30 jours</strong>.
       </p>
 
-      <h2>10. Geolocalisation et permissions systeme</h2>
+      <h2 id="chapitre-10">10. Geolocalisation et permissions systeme</h2>
 
       <h3>10.1. Geolocalisation continue</h3>
       <p>
@@ -400,7 +420,7 @@ export default function TermsRiderPage() {
         <li>Communications operationnelles Yonima</li>
       </ul>
 
-      <h2>11. Propriete intellectuelle</h2>
+      <h2 id="chapitre-11">11. Propriete intellectuelle</h2>
       <p>
         Le nom <strong>Yonima</strong>, le logo, l&apos;application et la
         marque sont la propriete exclusive de POULZZ - SUARL. Le Livreur recoit
@@ -408,12 +428,12 @@ export default function TermsRiderPage() {
         pendant la duree du Contrat.
       </p>
 
-      <h2>12. Protection des donnees personnelles</h2>
+      <h2 id="chapitre-12">12. Protection des donnees personnelles</h2>
       <p>
         Voir <a href="/privacy/rider">Politique de confidentialite Rider</a>.
       </p>
 
-      <h2>13. Responsabilite</h2>
+      <h2 id="chapitre-13">13. Responsabilite</h2>
 
       <h3>13.1. Responsabilite du Livreur</h3>
       <p>Le Livreur est <strong>seul responsable</strong> :</p>
@@ -449,10 +469,10 @@ export default function TermsRiderPage() {
         peut demander le justificatif a tout moment.
       </p>
 
-      <h2>14. Force majeure</h2>
+      <h2 id="chapitre-14">14. Force majeure</h2>
       <p>Definitions identiques a l&apos;article 17 des CGU Client.</p>
 
-      <h2>15. Litiges et droit applicable</h2>
+      <h2 id="chapitre-15">15. Litiges et droit applicable</h2>
 
       <h3>15.1. Droit applicable</h3>
       <p>Droit senegalais.</p>
@@ -470,14 +490,14 @@ export default function TermsRiderPage() {
         contraire.
       </p>
 
-      <h2>16. Dispositions generales</h2>
+      <h2 id="chapitre-16">16. Dispositions generales</h2>
       <ul>
         <li><strong>Nullite partielle</strong> : les autres stipulations demeurent en vigueur.</li>
         <li><strong>Cession</strong> : le Livreur ne peut pas ceder son compte ni les Courses qui lui sont attribuees. Yonima peut ceder ses droits avec information prealable.</li>
         <li><strong>Integralite</strong> : les presentes CGU constituent l&apos;integralite de l&apos;accord.</li>
       </ul>
 
-      <h2>17. Contact</h2>
+      <h2 id="chapitre-17">17. Contact</h2>
       <ul>
         <li>Support operations : <a href="mailto:contact@poulzz.com">contact@poulzz.com</a></li>
         <li>WhatsApp : +221 76 295 70 97</li>

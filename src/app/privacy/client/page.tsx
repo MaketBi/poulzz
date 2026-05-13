@@ -18,12 +18,6 @@ export default function PrivacyClientPage() {
         { href: "/privacy/rider", label: "Politique de confidentialite - Yonima Rider (Livreur)" },
       ]}
     >
-      <p>
-        Document valide en interne par le PO et les equipes Yonima. Une validation
-        juridique externe par un avocat senegalais est prevue avant le lancement
-        public V1.
-      </p>
-
       <h2>Preambule</h2>
       <p>
         La presente Politique de confidentialite decrit comment{" "}

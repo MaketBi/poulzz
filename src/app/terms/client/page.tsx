@@ -17,14 +17,31 @@ export default function TermsClientPage() {
         { href: "/terms/business", label: "CGU - Yonima Business (Vendeur)" },
         { href: "/terms/rider", label: "CGU - Yonima Rider (Livreur)" },
       ]}
+      tableOfContents={[
+        { id: "preambule", label: "Preambule" },
+        { id: "chapitre-1", label: "1. Definitions" },
+        { id: "chapitre-2", label: "2. Acceptation et modification des CGU/CGV" },
+        { id: "chapitre-3", label: "3. Compte utilisateur" },
+        { id: "chapitre-4", label: "4. Service Yonima" },
+        { id: "chapitre-5", label: "5. Commandes" },
+        { id: "chapitre-6", label: "6. Prix" },
+        { id: "chapitre-7", label: "7. Paiement" },
+        { id: "chapitre-8", label: "8. Livraison" },
+        { id: "chapitre-9", label: "9. Annulations, retours et remboursements" },
+        { id: "chapitre-10", label: "10. Programme de fidelite" },
+        { id: "chapitre-11", label: "11. Sponsorings et Vendeurs mis en avant" },
+        { id: "chapitre-12", label: "12. Protection des donnees personnelles" },
+        { id: "chapitre-13", label: "13. Geolocalisation et permissions systeme" },
+        { id: "chapitre-14", label: "14. Propriete intellectuelle" },
+        { id: "chapitre-15", label: "15. Comportement de l'Utilisateur et lutte anti-fraude" },
+        { id: "chapitre-16", label: "16. Responsabilite" },
+        { id: "chapitre-17", label: "17. Force majeure" },
+        { id: "chapitre-18", label: "18. Litiges et droit applicable" },
+        { id: "chapitre-19", label: "19. Dispositions generales" },
+        { id: "chapitre-20", label: "20. Contact" },
+      ]}
     >
-      <p>
-        Document valide en interne par le PO et les equipes Yonima. Une validation
-        juridique externe par un avocat senegalais est prevue avant le lancement
-        public V1.
-      </p>
-
-      <h2>Preambule</h2>
+      <h2 id="preambule">Preambule</h2>
       <p>
         Les presentes <strong>Conditions Generales d&apos;Utilisation et de Vente</strong>{" "}
         (ci-apres les &laquo; <strong>CGU/CGV</strong> &raquo; ou &laquo;{" "}
@@ -56,7 +73,7 @@ export default function TermsClientPage() {
         l&apos;utilisateur doit s&apos;abstenir d&apos;utiliser l&apos;Application.
       </p>
 
-      <h2>1. Definitions</h2>
+      <h2 id="chapitre-1">1. Definitions</h2>
       <ul>
         <li><strong>Application</strong> : l&apos;application mobile &laquo; Yonima Plus &raquo;, disponible sur Android (Google Play) et iOS (App Store), ainsi que tout site web associe.</li>
         <li><strong>Yonima / Nous / la Plateforme</strong> : Poulzz / Yonima, l&apos;editeur de l&apos;Application et l&apos;operateur du service de mise en relation et de livraison.</li>
@@ -71,7 +88,7 @@ export default function TermsClientPage() {
         <li><strong>Zone de livraison</strong> : perimetre geographique dans lequel les Vendeurs et Livreurs assurent la livraison. <strong>V1</strong> : agglomeration de Dakar (Pikine, Guediawaye, Rufisque, Keur Massar, Thiaroye et certains quartiers limitrophes).</li>
       </ul>
 
-      <h2>2. Acceptation et modification des CGU/CGV</h2>
+      <h2 id="chapitre-2">2. Acceptation et modification des CGU/CGV</h2>
 
       <h3>2.1. Acceptation initiale</h3>
       <p>
@@ -98,7 +115,7 @@ export default function TermsClientPage() {
         &gt; A propos &gt; Conditions d&apos;utilisation</strong>).
       </p>
 
-      <h2>3. Compte utilisateur</h2>
+      <h2 id="chapitre-3">3. Compte utilisateur</h2>
 
       <h3>3.1. Creation du Compte</h3>
       <p>
@@ -184,7 +201,7 @@ export default function TermsClientPage() {
         Les donnees restent conservees pendant la periode de litige eventuelle.
       </p>
 
-      <h2>4. Service Yonima</h2>
+      <h2 id="chapitre-4">4. Service Yonima</h2>
 
       <h3>4.1. Description</h3>
       <p>
@@ -245,7 +262,7 @@ export default function TermsClientPage() {
         <li>des cas de force majeure (cf. &sect;17).</li>
       </ul>
 
-      <h2>5. Commandes</h2>
+      <h2 id="chapitre-5">5. Commandes</h2>
 
       <h3>5.1. Constitution du Panier</h3>
       <p>
@@ -333,7 +350,7 @@ export default function TermsClientPage() {
         conformement a l&apos;article 2.2.
       </p>
 
-      <h2>6. Prix</h2>
+      <h2 id="chapitre-6">6. Prix</h2>
 
       <h3>6.1. Devise</h3>
       <p>
@@ -356,7 +373,7 @@ export default function TermsClientPage() {
         <li>Yonima se reserve le droit de <strong>desactiver un code promo</strong> en cas d&apos;usage frauduleux.</li>
       </ul>
 
-      <h2>7. Paiement</h2>
+      <h2 id="chapitre-7">7. Paiement</h2>
 
       <h3>7.1. Moyens de paiement acceptes</h3>
       <p>
@@ -433,7 +450,7 @@ export default function TermsClientPage() {
       <h3>7.7. Code de livraison</h3>
       <p>
         Pour securiser la remise de la Commande, un <strong>code de livraison a
-        4 chiffres</strong> est genere et affiche dans l&apos;Application au
+        3 chiffres</strong> est genere et affiche dans l&apos;Application au
         Client. Le Client doit communiquer ce code au Livreur au moment de la
         remise, qui valide ainsi la livraison effective dans l&apos;application
         Livreur. <strong>Sans communication du code, la Commande peut ne pas
@@ -449,7 +466,7 @@ export default function TermsClientPage() {
         sur demande au support.
       </p>
 
-      <h2>8. Livraison</h2>
+      <h2 id="chapitre-8">8. Livraison</h2>
 
       <h3>8.1. Adresse de livraison</h3>
       <p>
@@ -492,7 +509,7 @@ export default function TermsClientPage() {
       <h3>8.4. Code de livraison</h3>
       <p>
         A la remise de la Commande, le Livreur peut demander a l&apos;Utilisateur
-        un <strong>code de livraison a 4 chiffres</strong> affiche dans
+        un <strong>code de livraison a 3 chiffres</strong> affiche dans
         l&apos;Application, pour confirmer la bonne reception. Ce code est
         nominatif et <strong>ne doit pas etre communique avant la remise
         effective</strong>.
@@ -525,7 +542,7 @@ export default function TermsClientPage() {
         <strong>non recevable</strong> et le Client reste redevable du paiement.
       </p>
 
-      <h2>9. Annulations, retours et remboursements</h2>
+      <h2 id="chapitre-9">9. Annulations, retours et remboursements</h2>
 
       <h3>9.1. Principe - remboursement integral en cas de manquement de Yonima ou du Vendeur</h3>
       <p>
@@ -605,7 +622,7 @@ export default function TermsClientPage() {
         social de Yonima.
       </p>
 
-      <h2>10. Programme de fidelite</h2>
+      <h2 id="chapitre-10">10. Programme de fidelite</h2>
 
       <h3>10.1. Acquisition de points</h3>
       <p>
@@ -642,7 +659,7 @@ export default function TermsClientPage() {
         points</strong> et la suspension du Compte.
       </p>
 
-      <h2>11. Sponsorings et Vendeurs mis en avant</h2>
+      <h2 id="chapitre-11">11. Sponsorings et Vendeurs mis en avant</h2>
       <p>
         Certains Vendeurs apparaissent en <strong>mise en avant</strong> dans
         les sections <strong>&laquo; Pour vous &raquo;</strong> (accueil) et{" "}
@@ -666,7 +683,7 @@ export default function TermsClientPage() {
         consultation des contenus sponsorises.
       </p>
 
-      <h2>12. Protection des donnees personnelles</h2>
+      <h2 id="chapitre-12">12. Protection des donnees personnelles</h2>
       <p>
         Les donnees personnelles de l&apos;Utilisateur sont traitees conformement
         a la <strong>loi senegalaise n&deg; 2008-12 du 25 janvier 2008</strong>{" "}
@@ -684,7 +701,7 @@ export default function TermsClientPage() {
         personnelles &raquo;).
       </p>
 
-      <h2>13. Geolocalisation et permissions systeme</h2>
+      <h2 id="chapitre-13">13. Geolocalisation et permissions systeme</h2>
 
       <h3>13.1. Geolocalisation</h3>
       <p>
@@ -717,7 +734,7 @@ export default function TermsClientPage() {
         l&apos;Application.
       </p>
 
-      <h2>14. Propriete intellectuelle</h2>
+      <h2 id="chapitre-14">14. Propriete intellectuelle</h2>
 
       <h3>14.1. Marque et contenus Yonima</h3>
       <p>
@@ -764,7 +781,7 @@ export default function TermsClientPage() {
         etc.).
       </p>
 
-      <h2>15. Comportement de l&apos;Utilisateur et lutte anti-fraude</h2>
+      <h2 id="chapitre-15">15. Comportement de l&apos;Utilisateur et lutte anti-fraude</h2>
 
       <h3>15.1. Comportement attendu</h3>
       <p>L&apos;Utilisateur s&apos;engage a :</p>
@@ -798,7 +815,7 @@ export default function TermsClientPage() {
         <li>D&apos;<strong>engager toute procedure judiciaire</strong> en cas de fraude caracterisee.</li>
       </ul>
 
-      <h2>16. Responsabilite</h2>
+      <h2 id="chapitre-16">16. Responsabilite</h2>
 
       <h3>16.1. Responsabilite de Yonima</h3>
       <p>
@@ -840,7 +857,7 @@ export default function TermsClientPage() {
         <li>Le <strong>paiement effectif</strong> de ses Commandes.</li>
       </ul>
 
-      <h2>17. Force majeure</h2>
+      <h2 id="chapitre-17">17. Force majeure</h2>
       <p>
         Aucune des parties ne peut etre tenue responsable de l&apos;inexecution
         de ses obligations en cas de <strong>force majeure</strong> au sens du
@@ -856,7 +873,7 @@ export default function TermsClientPage() {
         <li>Decisions administratives ou judiciaires imprevisibles.</li>
       </ul>
 
-      <h2>18. Litiges et droit applicable</h2>
+      <h2 id="chapitre-18">18. Litiges et droit applicable</h2>
 
       <h3>18.1. Droit applicable</h3>
       <p>
@@ -879,7 +896,7 @@ export default function TermsClientPage() {
         Conditions, sauf disposition legale imperative contraire.
       </p>
 
-      <h2>19. Dispositions generales</h2>
+      <h2 id="chapitre-19">19. Dispositions generales</h2>
 
       <h3>19.1. Nullite partielle</h3>
       <p>
@@ -912,7 +929,7 @@ export default function TermsClientPage() {
         tout accord anterieur.
       </p>
 
-      <h2>20. Contact</h2>
+      <h2 id="chapitre-20">20. Contact</h2>
       <p>
         Pour toute question, reclamation ou demande relative a l&apos;utilisation
         de l&apos;Application :
