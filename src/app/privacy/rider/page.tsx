@@ -17,8 +17,22 @@ export default function PrivacyRiderPage() {
         { href: "/privacy/client", label: "Politique de confidentialite - Yonima Plus (Client)" },
         { href: "/privacy/business", label: "Politique de confidentialite - Yonima Business (Vendeur)" },
       ]}
+      tableOfContents={[
+        { id: "preambule", label: "Preambule" },
+        { id: "chapitre-1", label: "1. Donnees collectees" },
+        { id: "chapitre-2", label: "2. Finalites du traitement" },
+        { id: "chapitre-3", label: "3. Base juridique du traitement" },
+        { id: "chapitre-4", label: "4. Partage des donnees avec des tiers" },
+        { id: "chapitre-5", label: "5. Durees de conservation" },
+        { id: "chapitre-6", label: "6. Droits du Livreur" },
+        { id: "chapitre-7", label: "7. Cookies, traceurs et identifiants" },
+        { id: "chapitre-8", label: "8. Securite" },
+        { id: "chapitre-9", label: "9. Transferts hors Senegal" },
+        { id: "chapitre-10", label: "10. Modifications" },
+        { id: "chapitre-11", label: "11. Contact" },
+      ]}
     >
-      <h2>Preambule</h2>
+      <h2 id="preambule">Preambule</h2>
       <p>
         La presente Politique de confidentialite decrit comment{" "}
         <strong>POULZZ - SUARL</strong> (ci-apres &laquo; Yonima &raquo;),
@@ -32,7 +46,7 @@ export default function PrivacyRiderPage() {
         &raquo;).
       </p>
 
-      <h2>1. Donnees collectees</h2>
+      <h2 id="chapitre-1">1. Donnees collectees</h2>
 
       <h3>1.1. Donnees d&apos;identification</h3>
       <ul>
@@ -103,7 +117,7 @@ export default function PrivacyRiderPage() {
         <li>Codes PIN</li>
       </ul>
 
-      <h2>2. Finalites du traitement</h2>
+      <h2 id="chapitre-2">2. Finalites du traitement</h2>
       <table>
         <thead>
           <tr>
@@ -143,7 +157,7 @@ export default function PrivacyRiderPage() {
         </tbody>
       </table>
 
-      <h2>3. Base juridique du traitement</h2>
+      <h2 id="chapitre-3">3. Base juridique du traitement</h2>
       <table>
         <thead>
           <tr>
@@ -175,7 +189,7 @@ export default function PrivacyRiderPage() {
         </tbody>
       </table>
 
-      <h2>4. Partage des donnees avec des tiers</h2>
+      <h2 id="chapitre-4">4. Partage des donnees avec des tiers</h2>
       <table>
         <thead>
           <tr>
@@ -228,7 +242,7 @@ export default function PrivacyRiderPage() {
         Client. Le partage cesse des la livraison terminee.
       </p>
 
-      <h2>5. Durees de conservation</h2>
+      <h2 id="chapitre-5">5. Durees de conservation</h2>
       <table>
         <thead>
           <tr>
@@ -268,7 +282,7 @@ export default function PrivacyRiderPage() {
         </tbody>
       </table>
 
-      <h2>6. Droits du Livreur</h2>
+      <h2 id="chapitre-6">6. Droits du Livreur</h2>
       <p>Memes droits que tout utilisateur (loi 2008-12 + RGPD) :</p>
       <ul>
         <li>Acces, rectification, effacement, portabilite, opposition, limitation</li>
@@ -296,7 +310,7 @@ export default function PrivacyRiderPage() {
         dans l&apos;application Yonima Rider, ou par email a contact@poulzz.com.
       </p>
 
-      <h2>7. Cookies, traceurs et identifiants</h2>
+      <h2 id="chapitre-7">7. Cookies, traceurs et identifiants</h2>
       <ul>
         <li>Identifiant push (FCM / APNs)</li>
         <li>Identifiant publicitaire si permission accordee</li>
@@ -304,7 +318,7 @@ export default function PrivacyRiderPage() {
         <li>Aucun cookie publicitaire tiers</li>
       </ul>
 
-      <h2>8. Securite</h2>
+      <h2 id="chapitre-8">8. Securite</h2>
       <ul>
         <li>Chiffrement HTTPS/TLS</li>
         <li>Documents KYC chiffres au repos</li>
@@ -316,16 +330,16 @@ export default function PrivacyRiderPage() {
         <li>Audits reguliers</li>
       </ul>
 
-      <h2>9. Transferts hors Senegal</h2>
+      <h2 id="chapitre-9">9. Transferts hors Senegal</h2>
       <p>
         Sous-traitants identiques (Google Maps US, PostHog UE, Supabase selon
         region). Garanties via clauses contractuelles types.
       </p>
 
-      <h2>10. Modifications</h2>
+      <h2 id="chapitre-10">10. Modifications</h2>
       <p>Modification substantielle notifiee 15 jours avant entree en vigueur.</p>
 
-      <h2>11. Contact</h2>
+      <h2 id="chapitre-11">11. Contact</h2>
       <ul>
         <li>
           Email : <a href="mailto:contact@poulzz.com">contact@poulzz.com</a>{" "}

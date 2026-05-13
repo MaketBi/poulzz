@@ -17,8 +17,22 @@ export default function PrivacyBusinessPage() {
         { href: "/privacy/client", label: "Politique de confidentialite - Yonima Plus (Client)" },
         { href: "/privacy/rider", label: "Politique de confidentialite - Yonima Rider (Livreur)" },
       ]}
+      tableOfContents={[
+        { id: "preambule", label: "Preambule" },
+        { id: "chapitre-1", label: "1. Donnees collectees" },
+        { id: "chapitre-2", label: "2. Finalites du traitement" },
+        { id: "chapitre-3", label: "3. Base juridique du traitement" },
+        { id: "chapitre-4", label: "4. Partage des donnees avec des tiers" },
+        { id: "chapitre-5", label: "5. Durees de conservation" },
+        { id: "chapitre-6", label: "6. Droits du Vendeur" },
+        { id: "chapitre-7", label: "7. Cookies, traceurs et identifiants" },
+        { id: "chapitre-8", label: "8. Securite" },
+        { id: "chapitre-9", label: "9. Transferts hors Senegal" },
+        { id: "chapitre-10", label: "10. Modifications" },
+        { id: "chapitre-11", label: "11. Contact" },
+      ]}
     >
-      <h2>Preambule</h2>
+      <h2 id="preambule">Preambule</h2>
       <p>
         La presente Politique de confidentialite decrit comment{" "}
         <strong>POULZZ - SUARL</strong> (ci-apres &laquo; Yonima &raquo; ou
@@ -39,7 +53,7 @@ export default function PrivacyBusinessPage() {
         de la CDP.
       </p>
 
-      <h2>1. Donnees collectees</h2>
+      <h2 id="chapitre-1">1. Donnees collectees</h2>
 
       <h3>1.1. Donnees d&apos;identification du Vendeur (personne morale)</h3>
       <ul>
@@ -108,7 +122,7 @@ export default function PrivacyBusinessPage() {
         <li>Codes PIN ou mots de passe</li>
       </ul>
 
-      <h2>2. Finalites du traitement</h2>
+      <h2 id="chapitre-2">2. Finalites du traitement</h2>
       <table>
         <thead>
           <tr>
@@ -148,7 +162,7 @@ export default function PrivacyBusinessPage() {
         </tbody>
       </table>
 
-      <h2>3. Base juridique du traitement</h2>
+      <h2 id="chapitre-3">3. Base juridique du traitement</h2>
       <table>
         <thead>
           <tr>
@@ -180,7 +194,7 @@ export default function PrivacyBusinessPage() {
         </tbody>
       </table>
 
-      <h2>4. Partage des donnees avec des tiers</h2>
+      <h2 id="chapitre-4">4. Partage des donnees avec des tiers</h2>
       <table>
         <thead>
           <tr>
@@ -232,7 +246,7 @@ export default function PrivacyBusinessPage() {
         tiers a des fins commerciales.
       </p>
 
-      <h2>5. Durees de conservation</h2>
+      <h2 id="chapitre-5">5. Durees de conservation</h2>
       <table>
         <thead>
           <tr>
@@ -264,7 +278,7 @@ export default function PrivacyBusinessPage() {
         </tbody>
       </table>
 
-      <h2>6. Droits du Vendeur</h2>
+      <h2 id="chapitre-6">6. Droits du Vendeur</h2>
       <p>
         Le Vendeur (ou son representant legal) dispose des memes droits que tout
         utilisateur au sens de la loi 2008-12 et du RGPD :
@@ -293,7 +307,7 @@ export default function PrivacyBusinessPage() {
         contact@poulzz.com.
       </p>
 
-      <h2>7. Cookies, traceurs et identifiants</h2>
+      <h2 id="chapitre-7">7. Cookies, traceurs et identifiants</h2>
       <p>L&apos;application Yonima Business utilise :</p>
       <ul>
         <li>Identifiant de notification push (FCM / APNs) pour les alertes commandes</li>
@@ -301,7 +315,7 @@ export default function PrivacyBusinessPage() {
         <li>Aucun cookie publicitaire tiers</li>
       </ul>
 
-      <h2>8. Securite</h2>
+      <h2 id="chapitre-8">8. Securite</h2>
       <p>Memes mesures que pour la Politique de confidentialite Client :</p>
       <ul>
         <li>Chiffrement HTTPS/TLS</li>
@@ -314,21 +328,21 @@ export default function PrivacyBusinessPage() {
         Senegal dans les delais legaux applicables.
       </p>
 
-      <h2>9. Transferts hors Senegal</h2>
+      <h2 id="chapitre-9">9. Transferts hors Senegal</h2>
       <p>
         Memes sous-traitants que pour la Politique Client (Google Maps US,
         PostHog UE, Supabase selon region configuree). Garanties via clauses
         contractuelles types et engagements DPF.
       </p>
 
-      <h2>10. Modifications</h2>
+      <h2 id="chapitre-10">10. Modifications</h2>
       <p>
         Toute modification substantielle est notifiee au Vendeur au moins{" "}
         <strong>15 jours</strong> avant entree en vigueur, par notification push
         et ecran dedie a l&apos;ouverture de l&apos;application Business.
       </p>
 
-      <h2>11. Contact</h2>
+      <h2 id="chapitre-11">11. Contact</h2>
       <ul>
         <li>
           Email : <a href="mailto:contact@poulzz.com">contact@poulzz.com</a>{" "}
