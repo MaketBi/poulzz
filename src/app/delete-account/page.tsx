@@ -331,10 +331,10 @@ export default function DeleteAccountPage() {
                   type="text"
                   id="otp"
                   value={otp}
-                  onChange={(e) => setOtp(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                  onChange={(e) => setOtp(e.target.value.replace(/\D/g, "").slice(0, 4))}
                   required
-                  maxLength={6}
-                  placeholder="123456"
+                  maxLength={4}
+                  placeholder="1234"
                   className="mt-1 w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#F4541D] focus:border-transparent text-center text-2xl tracking-widest"
                 />
                 <p className="mt-2 text-sm text-gray-500 text-center">
@@ -350,7 +350,7 @@ export default function DeleteAccountPage() {
 
               <button
                 type="submit"
-                disabled={isLoading || otp.length !== 6}
+                disabled={isLoading || otp.length !== 4}
                 className="w-full py-3 px-4 bg-[#F4541D] text-white font-medium rounded-xl hover:bg-[#E04A15] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 {isLoading ? (
