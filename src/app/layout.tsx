@@ -19,16 +19,18 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   title: "Poulzz — La tech sénégalaise qui simplifie votre quotidien",
   description:
-    "Poulzz développe des solutions numériques adaptées aux réalités du Sénégal. Découvrez Yonima (livraison) et Skoolbi (gestion scolaire).",
+    "Poulzz développe des solutions numériques adaptées aux réalités du Sénégal. Découvrez Yonima (livraison), Skoolbi (gestion scolaire) et SenWaAPI (API WhatsApp).",
   keywords: [
     "Poulzz",
     "Yonima",
     "Skoolbi",
+    "SenWaAPI",
     "delivery",
     "livraison",
     "ERP scolaire",
     "gestion école",
     "éducation",
+    "WhatsApp API",
     "Senegal",
     "Dakar",
     "food delivery",
@@ -38,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Poulzz — La tech sénégalaise qui simplifie votre quotidien",
     description:
-      "Un écosystème de solutions numériques conçues au Sénégal, pour le Sénégal. Yonima (livraison) et Skoolbi (gestion scolaire).",
+      "Un écosystème de solutions numériques conçues au Sénégal, pour le Sénégal. Yonima (livraison), Skoolbi (gestion scolaire) et SenWaAPI (API WhatsApp).",
     url: "https://poulzz.com",
     siteName: "Poulzz",
     locale: "fr_SN",

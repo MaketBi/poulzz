@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   Truck,
   GraduationCap,
+  Code,
   Globe,
   Smartphone,
   Wifi,
@@ -23,6 +24,14 @@ const products = [
     href: "/skoolbi",
     iconColor: "text-[#7C3AED]",
     iconBg: "bg-[#7C3AED]/10",
+  },
+  {
+    icon: Code,
+    name: "SenWaAPI",
+    description: "API WhatsApp pour developpeurs",
+    href: "/senwaapi",
+    iconColor: "text-[#25d366]",
+    iconBg: "bg-[#25d366]/10",
   },
 ];
 

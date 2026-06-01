@@ -11,6 +11,7 @@ const navigation = [
   { name: "Accueil", href: "/" },
   { name: "Yonima", href: "/apps" },
   { name: "Skoolbi", href: "/skoolbi" },
+  { name: "SenWaAPI", href: "/senwaapi" },
   { name: "A propos", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];

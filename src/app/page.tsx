@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Truck, GraduationCap } from "lucide-react";
+import { ArrowRight, Truck, GraduationCap, Code } from "lucide-react";
 import {
   useScrollAnimation,
   useCounterAnimation,
@@ -40,7 +40,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-6 text-lg text-white/60 leading-relaxed max-w-[55ch]">
               Des solutions num&eacute;riques pens&eacute;es ici, pour ici.
-              Commerce, livraison, &eacute;ducation — un &eacute;cosyst&egrave;me
+              Commerce, livraison, &eacute;ducation, API — un &eacute;cosyst&egrave;me
               adapt&eacute; aux r&eacute;alit&eacute;s locales.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
@@ -72,7 +72,7 @@ export default function HomePage() {
         className="fade-in-section py-16 lg:py-24"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {/* Yonima Card */}
             <div className="bg-white rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
               <div className="flex items-center gap-4 mb-6">
@@ -149,6 +149,48 @@ export default function HomePage() {
                 className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-[#7C3AED] hover:underline"
               >
                 D&eacute;couvrir Skoolbi
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* SenWaAPI Card */}
+            <div className="bg-white rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <Image
+                  src="/images/senwaapi-icon.svg"
+                  alt="SenWaAPI"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 rounded-xl"
+                />
+                <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-[#25d366]/10">
+                  <Code className="w-6 h-6 text-[#25d366]" />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-[#1F492E]">
+                SenWaAPI — WhatsApp pour d&eacute;veloppeurs
+              </h3>
+              <p className="mt-3 text-[#1F492E]/60 leading-relaxed">
+                API WhatsApp multi-comptes. Envoyez messages, m&eacute;dias et
+                OTP depuis votre code en 30 secondes — sans paperasse Meta.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {["WhatsApp API", "Webhooks", "MCP", "Mobile money"].map(
+                  (badge) => (
+                    <span
+                      key={badge}
+                      className="inline-block px-3 py-1 text-sm font-medium rounded-full bg-[#25d366]/10 text-[#1F492E]"
+                    >
+                      {badge}
+                    </span>
+                  )
+                )}
+              </div>
+              <Link
+                href="/senwaapi"
+                className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-[#25d366] hover:underline"
+              >
+                D&eacute;couvrir SenWaAPI
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -233,8 +275,8 @@ export default function HomePage() {
             Pr&ecirc;t &agrave; rejoindre l&apos;aventure ?
           </h2>
           <p className="mt-4 text-[#1F492E]/60 max-w-xl mx-auto">
-            Que vous soyez une &eacute;cole, un commer&ccedil;ant ou un talent
-            tech — contactez-nous.
+            Que vous soyez une &eacute;cole, un commer&ccedil;ant, un d&eacute;veloppeur
+            ou un talent tech — contactez-nous.
           </p>
           <div className="mt-8">
             <Link

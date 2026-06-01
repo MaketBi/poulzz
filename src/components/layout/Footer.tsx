@@ -8,6 +8,7 @@ const footerLinks = {
     links: [
       { name: "Yonima", href: "/apps" },
       { name: "Skoolbi", href: "/skoolbi" },
+      { name: "SenWaAPI", href: "/senwaapi" },
     ],
   },
   ressources: {
@@ -53,7 +54,7 @@ export function Footer() {
             </Link>
             <p className="mt-4 text-sm text-white/60 max-w-xs">
               Poulzz SUARL — Solutions numeriques adaptees aux realites du
-              Senegal. Commerce, livraison et education.
+              Senegal. Commerce, livraison, education et API.
             </p>
 
             <div className="mt-4 space-y-2">
