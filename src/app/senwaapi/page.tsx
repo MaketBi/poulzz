@@ -18,7 +18,6 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  Smartphone,
 } from "lucide-react";
 import {
   useScrollAnimation,
@@ -338,7 +337,13 @@ export default function SenWaAPIPage() {
                     : "text-[#1F492E]/60 hover:text-[#1F492E]"
                 }`}
               >
-                <Smartphone className="w-4 h-4" />
+                <Image
+                  src="/images/logo-wave.png"
+                  alt="Wave"
+                  width={20}
+                  height={20}
+                  className="w-5 h-5 object-contain"
+                />
                 Wave (FCFA)
               </button>
             </div>
@@ -501,8 +506,15 @@ export default function SenWaAPIPage() {
                   rel="noopener"
                   className="inline-flex items-center justify-center px-8 py-3 bg-[#25d366] hover:bg-[#1fb855] text-white font-semibold rounded-full transition-colors"
                 >
+                  <Image
+                    src="/images/logo-wave.png"
+                    alt="Wave"
+                    width={20}
+                    height={20}
+                    className="w-5 h-5 object-contain brightness-0 invert"
+                  />
                   Commencer avec Wave
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-1" />
                 </a>
                 <p className="mt-3 text-sm text-[#1F492E]/40">
                   Paiement unique via Wave — sans reconduction automatique
@@ -517,7 +529,13 @@ export default function SenWaAPIPage() {
               <span>Carte (Stripe, EUR)</span>
             </div>
             <div className="inline-flex items-center gap-2 text-sm text-[#1F492E]/50">
-              <Smartphone className="w-4 h-4" />
+              <Image
+                src="/images/logo-wave.png"
+                alt="Wave"
+                width={16}
+                height={16}
+                className="w-4 h-4 object-contain"
+              />
               <span>Mobile money (Wave, XOF)</span>
             </div>
             <div className="inline-flex items-center gap-2 text-sm text-[#1F492E]/50">
