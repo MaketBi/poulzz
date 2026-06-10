@@ -14,6 +14,7 @@ const footerLinks = {
   ressources: {
     title: "RESSOURCES",
     links: [
+      { name: "Aide & Support", href: "/support" },
       { name: "Politique de confidentialite", href: "/privacy" },
       { name: "Conditions d'utilisation", href: "/terms" },
       { name: "Mentions legales", href: "/legal" },
