@@ -285,6 +285,11 @@ export default function TermsBusinessPage() {
         lors de son referencement. Cette commission peut evoluer selon
         l&apos;article 2.3.
       </p>
+      <p>
+        Le taux, ses modalites de calcul et ses conditions de modification sont
+        detailles dans les{" "}
+        <a href="/terms/cgv-vendeur">Conditions Generales de Vente Vendeur</a>.
+      </p>
 
       <h3>7.4. Frais de livraison</h3>
       <p>
