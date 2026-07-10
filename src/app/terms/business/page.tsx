@@ -280,15 +280,35 @@ export default function TermsBusinessPage() {
 
       <h3>7.3. Commission Plateforme</h3>
       <p>
-        Yonima retient une <strong>commission</strong> sur chaque Commande,
-        dont le pourcentage est defini contractuellement et indique au Vendeur
-        lors de son referencement. Cette commission peut evoluer selon
-        l&apos;article 2.3.
+        En contrepartie du service d&apos;intermediation fourni par la
+        Plateforme, Yonima preleve une <strong>Commission</strong> sur chaque
+        vente realisee via l&apos;Application. Le taux de Commission standard est
+        fixe a <strong>quinze pour cent (15 %)</strong> du prix de vente de
+        chaque produit vendu.
       </p>
       <p>
-        Le taux, ses modalites de calcul et ses conditions de modification sont
-        detailles dans les{" "}
-        <a href="/terms/cgv-vendeur">Conditions Generales de Vente Vendeur</a>.
+        <strong>Modalite de calcul</strong> : la Commission est calculee sur le{" "}
+        <strong>prix de vente</strong> affiche au Client. Le Vendeur saisit dans
+        l&apos;application le <strong>prix net</strong> qu&apos;il souhaite
+        percevoir ; la Plateforme calcule et affiche le prix de vente
+        correspondant, Commission incluse. Le Vendeur a ainsi une visibilite
+        directe sur le montant qu&apos;il percevra pour chaque produit.
+      </p>
+      <p>
+        <strong>Modification du taux</strong> : Yonima se reserve le droit de
+        modifier le taux de Commission a tout moment, a sa seule discretion.
+        Toute modification prend <strong>effet immediat des sa notification</strong>{" "}
+        au Vendeur (notification dans l&apos;application, ecran dedie a
+        l&apos;ouverture, message electronique ou tout autre canal approprie).
+        La poursuite de l&apos;utilisation de la Plateforme apres la notification
+        vaut acceptation du nouveau taux. Le taux applicable a une vente est
+        celui en vigueur au moment de la confirmation de la Commande.
+      </p>
+      <p>
+        Pour les Commandes reglees <strong>en especes</strong> directement
+        encaissees par le Vendeur, les modalites de perception de la Commission
+        sont precisees separement et peuvent faire l&apos;objet d&apos;un
+        decompte distinct (cf. article 8).
       </p>
 
       <h3>7.4. Frais de livraison</h3>
