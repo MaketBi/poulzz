@@ -17,8 +17,18 @@ const footerLinks = {
       { name: "Aide & Support", href: "/support" },
       { name: "Politique de confidentialite", href: "/privacy" },
       { name: "Conditions d'utilisation", href: "/terms" },
-      { name: "Mentions legales", href: "/legal" },
+      { name: "Mentions legales", href: "/legal/mentions-legales" },
       { name: "Suppression de compte", href: "/delete-account" },
+    ],
+  },
+  legal: {
+    title: "DOCUMENTS LEGAUX",
+    links: [
+      { name: "Informations legales", href: "/legal" },
+      { name: "Politique KYC", href: "/legal/kyc" },
+      { name: "Politique LCB-FT", href: "/legal/lcb-ft" },
+      { name: "Securite des transactions", href: "/legal/securite-transactions" },
+      { name: "Charte d'utilisation", href: "/legal/charte-utilisation" },
     ],
   },
   apropos: {
@@ -41,7 +51,7 @@ export function Footer() {
   return (
     <footer className="bg-[#1F492E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block">
@@ -114,6 +124,25 @@ export function Footer() {
             </h3>
             <ul className="mt-4 space-y-3">
               {footerLinks.ressources.links.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-white/60 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Documents legaux */}
+          <div>
+            <h3 className="text-xs font-semibold text-white/40 tracking-wider">
+              {footerLinks.legal.title}
+            </h3>
+            <ul className="mt-4 space-y-3">
+              {footerLinks.legal.links.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
