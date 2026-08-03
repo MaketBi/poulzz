@@ -28,6 +28,7 @@ const apps = [
       appStore: "#",
       playStore: "https://play.google.com/store/apps/details?id=com.poulzz.yonima.client&pcampaignid=web_share",
     },
+    qrImage: "/qr-yonima-get.png",
   },
   {
     id: "yonima-rider",
@@ -212,6 +213,23 @@ export default function AppsPage() {
                     Google Play
                   </a>
                 </div>
+
+                {/* QR Code (Yonima Plus uniquement) */}
+                {app.qrImage && (
+                  <div className="mt-8 flex items-center gap-4">
+                    <Image
+                      src={app.qrImage}
+                      alt={`QR code pour télécharger ${app.name}`}
+                      width={120}
+                      height={120}
+                      className="rounded-xl bg-white p-2 shadow-sm ring-1 ring-[#1F492E]/10"
+                    />
+                    <p className="text-sm text-[#1F492E]/60 max-w-[180px]">
+                      Scannez ce code avec votre téléphone pour être redirigé
+                      vers votre boutique.
+                    </p>
+                  </div>
+                )}
               </div>
 
               {/* App Icon */}
