@@ -188,8 +188,25 @@ export default function AppsPage() {
                   ))}
                 </div>
 
+                {/* QR Code (Yonima Plus uniquement) */}
+                {app.qrImage && (
+                  <div className="mt-8 flex items-center gap-4">
+                    <Image
+                      src={app.qrImage}
+                      alt={`QR code pour télécharger ${app.name}`}
+                      width={120}
+                      height={120}
+                      className="rounded-xl bg-white p-2 shadow-sm ring-1 ring-[#1F492E]/10"
+                    />
+                    <p className="text-sm font-medium text-[#1F492E]/70 max-w-[180px]">
+                      Scannez pour télécharger l&apos;application
+                      directement sur votre téléphone.
+                    </p>
+                  </div>
+                )}
+
                 {/* Store Buttons */}
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-6 flex flex-wrap gap-3">
                   <a
                     href={app.storeLinks.appStore}
                     target={app.storeLinks.appStore !== "#" ? "_blank" : undefined}
@@ -213,23 +230,6 @@ export default function AppsPage() {
                     Google Play
                   </a>
                 </div>
-
-                {/* QR Code (Yonima Plus uniquement) */}
-                {app.qrImage && (
-                  <div className="mt-8 flex items-center gap-4">
-                    <Image
-                      src={app.qrImage}
-                      alt={`QR code pour télécharger ${app.name}`}
-                      width={120}
-                      height={120}
-                      className="rounded-xl bg-white p-2 shadow-sm ring-1 ring-[#1F492E]/10"
-                    />
-                    <p className="text-sm text-[#1F492E]/60 max-w-[180px]">
-                      Scannez ce code avec votre téléphone pour être redirigé
-                      vers votre boutique.
-                    </p>
-                  </div>
-                )}
               </div>
 
               {/* App Icon */}
