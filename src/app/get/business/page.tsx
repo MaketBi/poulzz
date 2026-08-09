@@ -10,14 +10,13 @@ import type { Metadata } from "next";
  * JAMAIS, seuls les liens ci-dessous sont a mettre a jour si un store change.
  *
  * Bundle IDs de prod : iOS com.yonima.vendor · Android com.yonima.business
+ * Apple ID (App Store Connect) : 6758053728
  *
- * ATTENTION — la fiche iOS n'est pas publiee a ce jour (bundle
- * com.yonima.vendor introuvable sur l'App Store) : `ios` est a renseigner
- * depuis App Store Connect des que l'app est en ligne. Tant qu'elle est
- * nulle, les visiteurs iOS voient le fallback plutot qu'un lien mort.
+ * iOS : lien renseigne (fiche approuvee, a publier depuis App Store Connect).
+ * Android : deja publie (com.yonima.business).
  */
 const STORE_LINKS = {
-  ios: null as string | null,
+  ios: "https://apps.apple.com/app/id6758053728" as string | null,
   android:
     "https://play.google.com/store/apps/details?id=com.yonima.business&hl=fr",
 } as const satisfies { ios: string | null; android: string | null };

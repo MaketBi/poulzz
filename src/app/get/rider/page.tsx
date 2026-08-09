@@ -10,16 +10,14 @@ import type { Metadata } from "next";
  * les liens ci-dessous sont a mettre a jour si un store change.
  *
  * Bundle IDs de prod : iOS com.yonima.rider · Android com.yonima.rider
+ * Apple ID (App Store Connect) : 6757367548
  *
- * ATTENTION — aucune des deux fiches n'est publiee a ce jour :
- *   - Play  com.yonima.rider  -> 404
- *   - App Store (bundle com.yonima.rider) -> introuvable
- * Les valeurs ci-dessous sont donc a renseigner depuis Play Console /
- * App Store Connect des que les apps sont en ligne. Tant qu'elles sont
- * nulles, la page affiche le fallback sans bouton mort.
+ * iOS : lien renseigne (fiche approuvee, a publier depuis App Store Connect).
+ * Android : Play com.yonima.rider pas encore publie -> reste null (fallback,
+ * pas de bouton mort). Renseigner des que la fiche Play est en ligne.
  */
 const STORE_LINKS = {
-  ios: null as string | null,
+  ios: "https://apps.apple.com/app/id6757367548" as string | null,
   android: null as string | null,
 } as const satisfies { ios: string | null; android: string | null };
 
