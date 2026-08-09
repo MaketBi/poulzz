@@ -188,7 +188,7 @@ export default function DeleteAccountPage() {
             </p>
             <Link
               href="/"
-              className="mt-6 inline-flex items-center text-[#F4541D] font-medium hover:underline"
+              className="mt-6 inline-flex items-center text-[#2E6A3B] font-medium hover:underline"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
               Retour a l&apos;accueil
@@ -203,6 +203,9 @@ export default function DeleteAccountPage() {
     <div className="pt-16 lg:pt-20 min-h-screen bg-gray-50">
       <div className="max-w-lg mx-auto px-4 py-16 lg:py-24">
         <div className="text-center mb-8">
+          <div className="text-xs font-semibold tracking-[0.14em] text-[#2E6A3B] mb-4">
+            COMPTE YONIMA
+          </div>
           <h1 className="text-3xl font-bold text-gray-900">
             Supprimer mon compte
           </h1>
@@ -211,6 +214,37 @@ export default function DeleteAccountPage() {
               ? "Remplissez le formulaire ci-dessous pour demander la suppression de votre compte."
               : "Entrez le code de verification envoye par SMS."}
           </p>
+        </div>
+
+        {/* Stepper */}
+        <div className="flex gap-2.5 mb-7">
+          {[
+            { n: 1, label: "Vos informations", active: step === "form" },
+            { n: 2, label: "Code SMS", active: step === "otp" },
+            // L'étape 3 (Confirmation) a son propre écran plein (early return
+            // `step === "success"` plus haut), donc ici elle reste "à venir".
+            { n: 3, label: "Confirmation", active: false },
+          ].map((s) => (
+            <div
+              key={s.n}
+              className={`flex-1 flex items-center gap-2.5 rounded-[14px] border px-3 py-3.5 text-sm font-semibold ${
+                s.active
+                  ? "bg-white border-[#BEEBD1] text-[#2E6A3B]"
+                  : "bg-white border-[#E4E9E6] text-[#A8ADAA]"
+              }`}
+            >
+              <span
+                className={`flex items-center justify-center w-[22px] h-[22px] rounded-full text-xs ${
+                  s.active
+                    ? "bg-[#2E6A3B] text-white"
+                    : "bg-[#F1F4F2] text-[#A8ADAA]"
+                }`}
+              >
+                {s.n}
+              </span>
+              <span className="hidden sm:inline">{s.label}</span>
+            </div>
+          ))}
         </div>
 
         <div className="bg-white rounded-2xl shadow-sm p-6 lg:p-8">
@@ -231,7 +265,7 @@ export default function DeleteAccountPage() {
                   onChange={(e) => setPhone(e.target.value)}
                   required
                   placeholder="+221 77 123 45 67"
-                  className="mt-1 w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#F4541D] focus:border-transparent"
+                  className="mt-1 w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2E6A3B] focus:border-transparent"
                 />
                 <p className="mt-1 text-xs text-gray-400">
                   Le numero associe a votre compte Yonima
@@ -251,7 +285,7 @@ export default function DeleteAccountPage() {
                   value={app}
                   onChange={(e) => setApp(e.target.value)}
                   required
-                  className="mt-1 w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#F4541D] focus:border-transparent bg-white"
+                  className="mt-1 w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2E6A3B] focus:border-transparent bg-white"
                 >
                   <option value="">Selectionnez une application</option>
                   {apps.map((appOption) => (
@@ -276,7 +310,7 @@ export default function DeleteAccountPage() {
                   onChange={(e) => setReason(e.target.value)}
                   rows={3}
                   placeholder="Dites-nous pourquoi vous souhaitez supprimer votre compte..."
-                  className="mt-1 w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#F4541D] focus:border-transparent resize-none"
+                  className="mt-1 w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2E6A3B] focus:border-transparent resize-none"
                 />
               </div>
 
@@ -305,7 +339,7 @@ export default function DeleteAccountPage() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full py-3 px-4 bg-[#F4541D] text-white font-medium rounded-xl hover:bg-[#E04A15] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full py-3 px-4 bg-[#2E6A3B] text-white font-medium rounded-xl hover:bg-[#006D36] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 {isLoading ? (
                   <>
@@ -335,7 +369,7 @@ export default function DeleteAccountPage() {
                   required
                   maxLength={4}
                   placeholder="1234"
-                  className="mt-1 w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#F4541D] focus:border-transparent text-center text-2xl tracking-widest"
+                  className="mt-1 w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2E6A3B] focus:border-transparent text-center text-2xl tracking-widest"
                 />
                 <p className="mt-2 text-sm text-gray-500 text-center">
                   Code envoye au {phone}
@@ -351,7 +385,7 @@ export default function DeleteAccountPage() {
               <button
                 type="submit"
                 disabled={isLoading || otp.length !== 4}
-                className="w-full py-3 px-4 bg-[#F4541D] text-white font-medium rounded-xl hover:bg-[#E04A15] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full py-3 px-4 bg-[#2E6A3B] text-white font-medium rounded-xl hover:bg-[#006D36] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 {isLoading ? (
                   <>
@@ -379,7 +413,7 @@ export default function DeleteAccountPage() {
                   type="button"
                   onClick={handleResendOtp}
                   disabled={isLoading}
-                  className="text-[#F4541D] text-sm font-medium hover:underline disabled:opacity-50"
+                  className="text-[#2E6A3B] text-sm font-medium hover:underline disabled:opacity-50"
                 >
                   Renvoyer le code
                 </button>
@@ -391,7 +425,7 @@ export default function DeleteAccountPage() {
         {/* Help Link */}
         <p className="mt-6 text-center text-sm text-gray-500">
           Besoin d&apos;aide ?{" "}
-          <Link href="/contact" className="text-[#F4541D] hover:underline">
+          <Link href="/contact" className="text-[#2E6A3B] hover:underline">
             Contactez notre support
           </Link>
         </p>

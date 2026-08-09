@@ -56,7 +56,7 @@ export default function LegalPage() {
     <div className="pt-28 lg:pt-32">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="flex items-center gap-3 mb-6">
-          <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#D4500A]" />
+          <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#2E6A3B]" />
           <p className="text-xs font-semibold text-[#1F492E]/70 uppercase tracking-[0.18em]">
             POULZZ SUARL — Yonima
           </p>
@@ -76,14 +76,14 @@ export default function LegalPage() {
             <Link
               key={doc.href}
               href={doc.href}
-              className="group block rounded-2xl border border-[#1F492E]/10 bg-white/50 p-6 transition-colors hover:border-[#D4500A]/40 hover:bg-white"
+              className="group block rounded-2xl border border-[#1F492E]/10 bg-white/50 p-6 transition-colors hover:border-[#2E6A3B]/40 hover:bg-white"
             >
               <div className="flex items-start justify-between gap-3">
-                <h2 className="text-lg font-semibold text-[#1F492E] group-hover:text-[#D4500A] transition-colors">
+                <h2 className="text-lg font-semibold text-[#1F492E] group-hover:text-[#2E6A3B] transition-colors">
                   {doc.title}
                 </h2>
                 <svg
-                  className="w-4 h-4 mt-1 shrink-0 text-[#D4500A]"
+                  className="w-4 h-4 mt-1 shrink-0 text-[#2E6A3B]"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"
@@ -119,7 +119,7 @@ export default function LegalPage() {
             propriete intellectuelle), consultez les{" "}
             <Link
               href="/legal/mentions-legales"
-              className="text-[#D4500A] hover:underline"
+              className="text-[#2E6A3B] hover:underline"
             >
               mentions legales
             </Link>

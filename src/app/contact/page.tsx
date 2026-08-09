@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { CheckCircle, Mail, Phone, MapPin } from "lucide-react";
 
 export default function ContactPage() {
@@ -199,7 +200,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full sm:w-auto px-8 py-3 bg-[#D4500A] hover:bg-[#B8440A] text-white font-medium rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full sm:w-auto px-8 py-3 bg-[#2E6A3B] hover:bg-[#006D36] text-white font-medium rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {loading ? "Envoi en cours..." : "Envoyer le message"}
                     </button>
@@ -241,6 +242,19 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
+
+              {/* Utilisateur Yonima ? → support */}
+              <Link
+                href="/support"
+                className="block mt-4 bg-[#2E6A3B] rounded-2xl p-6 text-white transition-colors hover:bg-[#006D36]"
+              >
+                <div className="text-[11px] font-semibold tracking-[0.12em] text-white/70 mb-2.5">
+                  UTILISATEUR YONIMA ?
+                </div>
+                <div className="text-base font-medium leading-snug">
+                  Passez par le support client →
+                </div>
+              </Link>
             </div>
           </div>
         </div>

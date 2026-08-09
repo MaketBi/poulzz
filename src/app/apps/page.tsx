@@ -1,287 +1,365 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, MapPin, CreditCard, BarChart3, Route, Package, TrendingUp } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 
-const apps = [
-  {
-    id: "yonima-plus",
-    name: "Yonima Plus",
-    category: "APPLICATION CLIENT",
-    tagline: "Commandez facilement, recevez rapidement",
-    description:
-      "L'experience de livraison reinventee pour le consommateur senegalais moderne. Commandez vos repas, courses et produits essentiels en toute simplicite avec un suivi en temps reel.",
-    features: [
-      {
-        icon: MapPin,
-        title: "Suivi GPS en temps reel",
-        description: "Suivez votre commande du restaurant jusqu'a votre porte avec une precision metrique.",
-      },
-      {
-        icon: CreditCard,
-        title: "Paiements multi-canaux",
-        description: "Integration native avec Orange Money, Wave et les reseaux bancaires locaux.",
-      },
-    ],
-    bgColor: "bg-[#EED6A4]/30",
-    image: "/images/app-yonima-plus.png",
-    storeLinks: {
-      appStore: "#",
-      playStore: "https://play.google.com/store/apps/details?id=com.poulzz.yonima.client&pcampaignid=web_share",
-    },
-    qrImage: "/qr-yonima-get.png",
-  },
-  {
-    id: "yonima-rider",
-    name: "Yonima Rider",
-    category: "APPLICATION LIVREUR",
-    tagline: "Livrez, gagnez, evoluez",
-    description:
-      "Donnez les moyens a des milliers de livreurs independants avec des outils professionnels pour maximiser leur impact quotidien et leurs revenus.",
-    features: [
-      {
-        icon: BarChart3,
-        title: "Tableau de bord des gains",
-        description: "Acces instantane a vos revenus quotidiens, commissions, pourboires et performances.",
-      },
-      {
-        icon: Route,
-        title: "Routage optimise",
-        description: "Planification intelligente des itineraires pour eviter le trafic et livrer plus rapidement.",
-      },
-    ],
-    bgColor: "bg-[#31CC71]/10",
-    image: "/images/app-yonima-rider.png",
-    storeLinks: {
-      appStore: "#",
-      playStore: "#",
-    },
-  },
-  {
-    id: "yonima-vendeur",
-    name: "Yonima Vendeur",
-    category: "APPLICATION COMMERCANT",
-    tagline: "Developpez votre activite numeriquement",
-    description:
-      "Transformez votre commerce traditionnel en puissance digitale. Gerez vos stocks, suivez vos ventes et atteignez des milliers de nouveaux clients.",
-    features: [
-      {
-        icon: Package,
-        title: "Gestion des stocks",
-        description: "Suivi automatise des stocks sur tous les canaux de livraison.",
-      },
-      {
-        icon: TrendingUp,
-        title: "Analyses marche",
-        description: "Donnees comportementales pour comprendre les heures de pointe et les articles populaires.",
-      },
-    ],
-    bgColor: "bg-[#1F492E]/5",
-    image: "/images/app-yonima-vendeur.png",
-    storeLinks: {
-      appStore: "#",
-      playStore: "#",
-    },
-  },
-];
+const YONIMA_PLUS = {
+  playStore:
+    "https://play.google.com/store/apps/details?id=com.poulzz.yonima.client&pcampaignid=web_share",
+  appStore: "https://apps.apple.com/fr/app/yonima-plus/id6756845915",
+};
 
 const testimonials = [
   {
+    rating: "4,8",
     quote:
-      "Yonima Plus a change ma facon de commander mon dejeuner au Plateau. C'est rapide, fiable, et j'adore pouvoir payer avec Wave.",
-    author: "Awa Diop",
-    role: "CLIENTE",
-    avatar: "A",
+      "Mon thiébou arrive encore chaud, et je paie avec Wave sans sortir de l'app.",
+    author: "Awa D.",
+    role: "cliente, Yoff",
+    avatar: "AD",
   },
   {
+    rating: "4,9",
     quote:
-      "L'app est tres facile a utiliser. Je peux voir exactement combien j'ai gagne chaque jour, ce qui m'aide a planifier pour ma famille.",
-    author: "Moussa Fall",
-    role: "LIVREUR",
-    avatar: "M",
+      "Je vois mes gains course par course. Le retrait vers Wave prend une minute.",
+    author: "Moussa S.",
+    role: "livreur, Plateau",
+    avatar: "MS",
   },
   {
+    rating: "4,7",
     quote:
-      "Integrer notre boulangerie avec Yonima Vendeur etait la meilleure decision. Nos commandes ont augmente de 40% depuis.",
-    author: "Fatou Ndiaye",
-    role: "COMMERCANTE",
-    avatar: "F",
+      "Mes commandes du soir ont doublé depuis que ma boutique est sur Yonima.",
+    author: "Fatou N.",
+    role: "commerçante, Almadies",
+    avatar: "FN",
   },
 ];
 
 export default function AppsPage() {
   return (
-    <div className="pt-28 lg:pt-32">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-          <div className="max-w-3xl">
-            <p className="text-sm font-medium text-[#1F492E]/50 tracking-wider uppercase">
-              CONSTRUIT POUR LE SENEGAL
-            </p>
-            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-              <span className="text-[#1F492E]">Le Coeur de la</span>
-              <br />
-              <span className="gradient-text">Logistique</span>
-              <br />
-              <span className="gradient-text">Senegalaise</span>
+    <div className="bg-[#FCF9F8]">
+      {/* Hero */}
+      <section className="max-w-[1536px] mx-auto px-6 sm:px-10 lg:px-[72px] pt-36 lg:pt-40 pb-12 lg:pb-[88px]">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-14 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.12em] text-[#006D36] bg-[#EAF9F0] rounded-full px-3.5 py-2 mb-7">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#31CC71]" />
+              CONSTRUIT POUR LE S&Eacute;N&Eacute;GAL
+            </div>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-[-0.045em] leading-[0.98] text-[#1A1A1A]">
+              Le c&oelig;ur de la logistique{" "}
+              <span className="text-[#2E6A3B]">
+                s&eacute;n&eacute;galaise<span className="text-[#31CC71]">.</span>
+              </span>
             </h1>
-            <p className="mt-6 text-lg text-[#1F492E]/60 max-w-xl">
-              Un ecosysteme de plateformes interconnectees qui transforme
-              l&apos;avenir du commerce et de la livraison en Afrique de
-              l&apos;Ouest.
+            <p className="mt-7 max-w-[520px] text-lg sm:text-xl font-light text-[#7A7A7A] leading-relaxed">
+              Une app pour commander, une pour livrer, une pour vendre — une
+              seule logistique, du GPS au paiement Wave.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="#yonima-plus"
-                className="inline-flex items-center gap-2 px-6 py-3 text-base font-medium text-white bg-[#D4500A] rounded-full hover:bg-[#B8440A] transition-colors cursor-pointer"
+            <div className="mt-9 flex flex-col sm:flex-row gap-4">
+              <a
+                href="/get"
+                className="inline-flex items-center justify-center gap-1.5 bg-[#2E6A3B] text-white text-base font-semibold px-7 py-4 rounded-2xl hover:bg-[#006D36] active:scale-[0.98] transition-all"
               >
-                Explorer l&apos;ecosysteme
-                <ArrowRight className="h-4 w-4" />
-              </Link>
+                T&eacute;l&eacute;charger Yonima Plus
+                <ArrowRight className="w-4 h-4" />
+              </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 text-base font-medium text-[#1F492E] border border-[#1F492E]/30 rounded-full hover:bg-[#1F492E]/5 transition-colors cursor-pointer"
+                className="inline-flex items-center justify-center bg-white border border-[#E4E9E6] text-[#1A1A1A] text-base font-semibold px-7 py-4 rounded-2xl hover:border-[#2E6A3B]/30 transition-colors"
               >
                 Devenir partenaire
               </Link>
             </div>
           </div>
+
+          {/* Cluster d'icônes */}
+          <div className="relative h-[340px] sm:h-[380px]">
+            <Image
+              src="/images/app-yonima-plus.png"
+              alt="Yonima Plus"
+              width={200}
+              height={200}
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 sm:w-52 sm:h-52 rounded-[44px] border border-[#EDF1EF] shadow-xl z-20"
+            />
+            <Image
+              src="/images/app-yonima-rider.png"
+              alt="Yonima Rider"
+              width={120}
+              height={120}
+              className="absolute left-[6%] top-[8%] w-28 h-28 rounded-[30px] border border-[#EDF1EF] shadow-lg -rotate-[8deg] z-10"
+            />
+            <Image
+              src="/images/app-yonima-vendeur.png"
+              alt="Yonima Vendeur"
+              width={120}
+              height={120}
+              className="absolute right-[2%] bottom-[4%] w-28 h-28 rounded-[30px] border border-[#EDF1EF] shadow-lg rotate-[8deg] z-10"
+            />
+            <span className="absolute right-[12%] top-[12%] text-6xl font-bold text-[#31CC71] z-20">
+              +
+            </span>
+          </div>
         </div>
       </section>
 
-      {/* Apps Sections */}
-      {apps.map((app, index) => (
-        <section
-          key={app.id}
-          id={app.id}
-          className={`py-16 lg:py-24 ${index % 2 === 0 ? "bg-white" : "bg-[#F5F1EB]"}`}
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center`}>
-              {/* Content */}
-              <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                <p className="text-sm font-medium text-[#D4500A] tracking-wider">
-                  {app.category}
-                </p>
-                <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-[#1F492E]">
-                  {app.name}
-                </h2>
-                <p className="mt-2 text-xl text-[#1F492E]/70">{app.tagline}</p>
-                <p className="mt-4 text-[#1F492E]/60">{app.description}</p>
-
-                {/* Features */}
-                <div className="mt-8 space-y-6">
-                  {app.features.map((feature) => (
-                    <div key={feature.title} className="flex gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#D4500A]/10 flex items-center justify-center">
-                        <feature.icon className="h-5 w-5 text-[#D4500A]" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-[#1F492E]">
-                          {feature.title}
-                        </h3>
-                        <p className="mt-1 text-sm text-[#1F492E]/60">
-                          {feature.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
+      {/* Bloc 1 — Yonima Plus (Client) */}
+      <section className="max-w-[1536px] mx-auto px-6 sm:px-10 lg:px-[72px] pb-7">
+        <div className="grid grid-cols-1 lg:grid-cols-2 bg-white border border-[#EDF1EF] rounded-[26px] overflow-hidden">
+          <div className="p-8 sm:p-14 flex flex-col gap-5">
+            <div className="flex items-center gap-4">
+              <Image
+                src="/images/app-yonima-plus.png"
+                alt=""
+                width={64}
+                height={64}
+                className="w-16 h-16 rounded-[18px]"
+              />
+              <div>
+                <div className="text-[11px] font-semibold tracking-[0.12em] text-[#006D36]">
+                  APPLICATION CLIENT
                 </div>
-
-                {/* QR Code (Yonima Plus uniquement) */}
-                {app.qrImage && (
-                  <div className="mt-8 flex items-center gap-4">
-                    <Image
-                      src={app.qrImage}
-                      alt={`QR code pour télécharger ${app.name}`}
-                      width={120}
-                      height={120}
-                      className="rounded-xl bg-white p-2 shadow-sm ring-1 ring-[#1F492E]/10"
-                    />
-                    <p className="text-sm font-medium text-[#1F492E]/70 max-w-[180px]">
-                      Scannez pour télécharger l&apos;application
-                      directement sur votre téléphone.
-                    </p>
-                  </div>
-                )}
-
-                {/* Store Buttons */}
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <a
-                    href={app.storeLinks.appStore}
-                    target={app.storeLinks.appStore !== "#" ? "_blank" : undefined}
-                    rel={app.storeLinks.appStore !== "#" ? "noopener noreferrer" : undefined}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#1F492E] text-white text-sm font-medium rounded-lg hover:bg-[#1F492E]/90 transition-colors cursor-pointer"
-                  >
-                    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                    </svg>
-                    App Store
-                  </a>
-                  <a
-                    href={app.storeLinks.playStore}
-                    target={app.storeLinks.playStore !== "#" ? "_blank" : undefined}
-                    rel={app.storeLinks.playStore !== "#" ? "noopener noreferrer" : undefined}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#1F492E] text-white text-sm font-medium rounded-lg hover:bg-[#1F492E]/90 transition-colors cursor-pointer"
-                  >
-                    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
-                    </svg>
-                    Google Play
-                  </a>
+                <div className="mt-1.5 text-3xl font-bold tracking-[-0.03em] text-[#1A1A1A]">
+                  Yonima Plus
                 </div>
-              </div>
-
-              {/* App Icon */}
-              <div className={`${app.bgColor} rounded-3xl aspect-square flex items-center justify-center ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                <Image
-                  src={app.image}
-                  alt={app.name}
-                  width={400}
-                  height={400}
-                  className="w-64 h-64 lg:w-80 lg:h-80 object-contain"
-                />
               </div>
             </div>
-          </div>
-        </section>
-      ))}
-
-      {/* Testimonials Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1F492E]">
-              Impact de confiance
-            </h2>
-            <p className="mt-4 text-[#1F492E]/60">
-              Temoignages de notre communaute a travers l&apos;ecosysteme Yonima.
+            <p className="text-[16.5px] text-[#7A7A7A] leading-relaxed">
+              Commandez facilement, recevez rapidement. Repas, courses et
+              essentiels, en toute simplicit&eacute;.
             </p>
-          </div>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
-              <div
-                key={testimonial.author}
-                className="bg-[#F5F1EB] rounded-2xl p-6"
-              >
-                <p className="text-[#1F492E]/70 italic">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#D4500A] flex items-center justify-center text-white font-semibold">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#1F492E]">
-                      {testimonial.author}
-                    </p>
-                    <p className="text-xs text-[#1F492E]/40">{testimonial.role}</p>
+            <div className="flex flex-col gap-3">
+              {[
+                [
+                  "Suivi GPS en temps réel",
+                  "du restaurant jusqu'à votre porte, à la minute près",
+                ],
+                [
+                  "Paiements multi-canaux",
+                  "Wave, Orange Money et réseaux bancaires locaux",
+                ],
+              ].map(([title, sub]) => (
+                <div key={title} className="flex gap-3.5 items-start">
+                  <span className="w-[34px] h-[34px] flex-none rounded-full bg-[#EAF9F0] flex items-center justify-center text-[#2E6A3B]">
+                    <Check className="w-4 h-4" strokeWidth={3} />
+                  </span>
+                  <div className="text-[15.5px] font-medium text-[#1A1A1A] leading-snug">
+                    {title}
+                    <br />
+                    <span className="font-normal text-[#7A7A7A]">{sub}</span>
                   </div>
                 </div>
+              ))}
+            </div>
+
+            {/* QR — moyen de téléchargement principal, AU-DESSUS des stores */}
+            <div className="flex items-center gap-4 sm:gap-[18px] bg-[#F2F8F4] border border-[#BEEBD1] rounded-[18px] p-[18px]">
+              <Image
+                src="/qr-yonima-get.png"
+                alt="QR de téléchargement Yonima Plus"
+                width={104}
+                height={104}
+                className="w-[104px] h-[104px] flex-none rounded-lg bg-white border border-[#E4E9E6] p-1.5"
+              />
+              <div className="text-[15px] font-medium text-[#1A1A1A] leading-snug">
+                Scannez pour t&eacute;l&eacute;charger
+                <br />
+                <span className="font-normal text-[#7A7A7A]">
+                  le moyen le plus rapide d&apos;installer l&apos;app
+                </span>
               </div>
-            ))}
+            </div>
+
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={YONIMA_PLUS.appStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#2E6A3B] text-white text-sm font-semibold px-6 py-3.5 rounded-[14px] hover:bg-[#006D36] transition-colors"
+              >
+                App Store
+              </a>
+              <a
+                href={YONIMA_PLUS.playStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#2E6A3B] text-white text-sm font-semibold px-6 py-3.5 rounded-[14px] hover:bg-[#006D36] transition-colors"
+              >
+                Google Play
+              </a>
+            </div>
           </div>
+
+          <div className="bg-[#E4E9E6] min-h-[320px] lg:min-h-[520px] flex items-center justify-center text-[13px] font-medium text-[#A8ADAA] p-8 text-center">
+            Capture d&apos;&eacute;cran — commande &amp; suivi Yonima Plus
+          </div>
+        </div>
+      </section>
+
+      {/* Bloc 2 — Yonima Rider (Livreur), image à gauche */}
+      <section className="max-w-[1536px] mx-auto px-6 sm:px-10 lg:px-[72px] pb-7">
+        <div className="grid grid-cols-1 lg:grid-cols-2 bg-white border border-[#EDF1EF] rounded-[26px] overflow-hidden">
+          <div className="order-2 lg:order-1 bg-[#E4E9E6] min-h-[320px] lg:min-h-[440px] flex items-center justify-center text-[13px] font-medium text-[#A8ADAA] p-8 text-center">
+            Photo — livreur Yonima en scooter, Dakar
+          </div>
+          <div className="order-1 lg:order-2 p-8 sm:p-14 flex flex-col gap-5">
+            <div className="flex items-center gap-4">
+              <Image
+                src="/images/app-yonima-rider.png"
+                alt=""
+                width={64}
+                height={64}
+                className="w-16 h-16 rounded-[18px]"
+              />
+              <div>
+                <div className="text-[11px] font-semibold tracking-[0.12em] text-[#006D36]">
+                  APPLICATION LIVREUR
+                </div>
+                <div className="mt-1.5 text-3xl font-bold tracking-[-0.03em] text-[#1A1A1A]">
+                  Yonima Rider
+                </div>
+              </div>
+            </div>
+            <p className="text-[16.5px] text-[#7A7A7A] leading-relaxed">
+              Vos gains en clair, vos trajets optimis&eacute;s. Livrez quand vous
+              voulez, encaissez sans friction.
+            </p>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Routage intelligent", "les meilleures courses, sans détour inutile"],
+                ["Gains transparents", "chaque course détaillée, retrait vers Wave"],
+              ].map(([title, sub]) => (
+                <div key={title} className="flex gap-3.5 items-start">
+                  <span className="w-[34px] h-[34px] flex-none rounded-full bg-[#EAF9F0] flex items-center justify-center text-[#2E6A3B]">
+                    <Check className="w-4 h-4" strokeWidth={3} />
+                  </span>
+                  <div className="text-[15.5px] font-medium text-[#1A1A1A] leading-snug">
+                    {title}
+                    <br />
+                    <span className="font-normal text-[#7A7A7A]">{sub}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-auto flex flex-wrap gap-2.5">
+              <span className="border border-[#E4E9E6] text-[#7A7A7A] text-[13px] font-semibold px-5 py-3 rounded-[14px]">
+                App Store &middot; bient&ocirc;t
+              </span>
+              <span className="border border-[#E4E9E6] text-[#7A7A7A] text-[13px] font-semibold px-5 py-3 rounded-[14px]">
+                Google Play &middot; bient&ocirc;t
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bloc 3 — Yonima Vendeur (Commerçant) */}
+      <section className="max-w-[1536px] mx-auto px-6 sm:px-10 lg:px-[72px] pb-7">
+        <div className="grid grid-cols-1 lg:grid-cols-2 bg-white border border-[#EDF1EF] rounded-[26px] overflow-hidden">
+          <div className="p-8 sm:p-14 flex flex-col gap-5">
+            <div className="flex items-center gap-4">
+              <Image
+                src="/images/app-yonima-vendeur.png"
+                alt=""
+                width={64}
+                height={64}
+                className="w-16 h-16 rounded-[18px]"
+              />
+              <div>
+                <div className="text-[11px] font-semibold tracking-[0.12em] text-[#006D36]">
+                  APPLICATION COMMER&Ccedil;ANT
+                </div>
+                <div className="mt-1.5 text-3xl font-bold tracking-[-0.03em] text-[#1A1A1A]">
+                  Yonima Vendeur
+                </div>
+              </div>
+            </div>
+            <p className="text-[16.5px] text-[#7A7A7A] leading-relaxed">
+              La boutique dans la poche. Stocks, commandes et analyses, du
+              Plateau aux Almadies.
+            </p>
+            <div className="flex flex-col gap-3">
+              {[
+                ["Gestion des stocks", "disponibilité mise à jour en un geste"],
+                ["Analyses de ventes", "vos meilleures heures, vos meilleurs plats"],
+              ].map(([title, sub]) => (
+                <div key={title} className="flex gap-3.5 items-start">
+                  <span className="w-[34px] h-[34px] flex-none rounded-full bg-[#EAF9F0] flex items-center justify-center text-[#2E6A3B]">
+                    <Check className="w-4 h-4" strokeWidth={3} />
+                  </span>
+                  <div className="text-[15.5px] font-medium text-[#1A1A1A] leading-snug">
+                    {title}
+                    <br />
+                    <span className="font-normal text-[#7A7A7A]">{sub}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-auto flex flex-wrap gap-2.5">
+              <span className="border border-[#E4E9E6] text-[#7A7A7A] text-[13px] font-semibold px-5 py-3 rounded-[14px]">
+                App Store &middot; bient&ocirc;t
+              </span>
+              <span className="border border-[#E4E9E6] text-[#7A7A7A] text-[13px] font-semibold px-5 py-3 rounded-[14px]">
+                Google Play &middot; bient&ocirc;t
+              </span>
+            </div>
+          </div>
+          <div className="bg-[#E4E9E6] min-h-[320px] lg:min-h-[440px] flex items-center justify-center text-[13px] font-medium text-[#A8ADAA] p-8 text-center">
+            Photo — commer&ccedil;ante, march&eacute; de Dakar
+          </div>
+        </div>
+      </section>
+
+      {/* Témoignages + CTA */}
+      <section className="max-w-[1536px] mx-auto px-6 sm:px-10 lg:px-[72px] py-16 lg:py-24">
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-[-0.035em] text-[#1A1A1A] mb-8">
+          Ils utilisent Yonima<span className="text-[#31CC71]">.</span>
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {testimonials.map((t) => (
+            <div
+              key={t.author}
+              className="bg-white border border-[#EDF1EF] rounded-[20px] p-7 sm:p-8 flex flex-col gap-4"
+            >
+              <div className="text-[15px] text-[#2E6A3B]">
+                &#9733;&#9733;&#9733;&#9733;&#9733;{" "}
+                <span className="text-[#7A7A7A]">{t.rating}</span>
+              </div>
+              <p className="text-[15.5px] text-[#1A1A1A] leading-relaxed">
+                &laquo;&nbsp;{t.quote}&nbsp;&raquo;
+              </p>
+              <div className="mt-auto flex items-center gap-3">
+                <span className="w-10 h-10 rounded-full bg-[#EAF9F0] flex items-center justify-center text-sm font-semibold text-[#2E6A3B]">
+                  {t.avatar}
+                </span>
+                <div className="text-sm font-semibold text-[#1A1A1A] leading-snug">
+                  {t.author}
+                  <br />
+                  <span className="font-normal text-[#7A7A7A]">{t.role}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-14 bg-[#2E6A3B] rounded-[26px] px-9 sm:px-16 py-12 sm:py-14 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-[-0.035em] text-white">
+              Pr&ecirc;t &agrave; commander <span className="text-[#31CC71]">?</span>
+            </h2>
+            <p className="mt-3 text-[17px] font-light text-white/80">
+              T&eacute;l&eacute;chargez Yonima Plus et recevez votre premi&egrave;re
+              commande aujourd&apos;hui.
+            </p>
+          </div>
+          <a
+            href="/get"
+            className="inline-flex items-center gap-1.5 bg-[#31CC71] text-[#006D36] text-base font-semibold px-8 py-4 rounded-2xl whitespace-nowrap hover:brightness-105 active:scale-[0.98] transition-all"
+          >
+            T&eacute;l&eacute;charger l&apos;app
+            <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </section>
     </div>

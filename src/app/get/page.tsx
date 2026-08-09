@@ -49,9 +49,9 @@ export default async function GetPage() {
 
   // Desktop / autres : page de fallback avec les deux stores.
   return (
-    <div className="pt-28 lg:pt-32 min-h-screen bg-[#F5F1EB]">
+    <div className="pt-28 lg:pt-32 min-h-screen bg-[#F8FAFC]">
       <section className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
-        <p className="text-sm font-medium text-[#D4500A] tracking-wider uppercase">
+        <p className="text-sm font-medium text-[#2E6A3B] tracking-wider uppercase">
           Application Client
         </p>
         <h1 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight text-[#1F492E]">

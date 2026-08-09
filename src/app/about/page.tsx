@@ -68,6 +68,9 @@ export default function AboutPage() {
       <section className="pb-16 lg:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
+            <div className="text-xs font-semibold tracking-[0.14em] text-[#2E6A3B] mb-6">
+              POULZZ SUARL — DAKAR, SÉNÉGAL
+            </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#1F492E]">
               A propos de Poulzz
             </h1>
@@ -117,7 +120,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Approach */}
-      <section className="pb-16 lg:pb-24 bg-[#F5F1EB]">
+      <section className="pb-16 lg:pb-24 bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#1F492E] mb-8">
             Notre approche
@@ -190,7 +193,7 @@ export default function AboutPage() {
           <div className="mt-8">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-[#D4500A] rounded-full hover:bg-[#B8440A] transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-[#2E6A3B] rounded-full hover:bg-[#006D36] transition-colors"
             >
               Nous contacter
             </Link>

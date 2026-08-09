@@ -48,9 +48,9 @@ export default function PrivacyHubPage() {
             <Link
               key={v.href}
               href={v.href}
-              className="block p-6 bg-white border border-[#1F492E]/15 rounded-2xl hover:border-[#D4500A] transition-colors"
+              className="block p-6 bg-white border border-[#1F492E]/15 rounded-2xl hover:border-[#2E6A3B] transition-colors"
             >
-              <p className="text-sm font-medium text-[#D4500A] uppercase tracking-wider">
+              <p className="text-sm font-medium text-[#2E6A3B] uppercase tracking-wider">
                 {v.eyebrow}
               </p>
               <h2 className="mt-2 text-xl font-bold text-[#1F492E]">
@@ -65,7 +65,7 @@ export default function PrivacyHubPage() {
           Pour toute question relative aux donnees personnelles :{" "}
           <a
             href="mailto:contact@poulzz.com"
-            className="text-[#D4500A] hover:underline"
+            className="text-[#2E6A3B] hover:underline"
           >
             contact@poulzz.com
           </a>{" "}
