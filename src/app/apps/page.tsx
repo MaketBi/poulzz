@@ -191,8 +191,18 @@ export default function AppsPage() {
             </div>
           </div>
 
-          <div className="bg-[#E4E9E6] min-h-[320px] lg:min-h-[520px] flex items-center justify-center text-[13px] font-medium text-[#A8ADAA] p-8 text-center">
-            Capture d&apos;&eacute;cran — commande &amp; suivi Yonima Plus
+          <div className="bg-[#EAF9F0] min-h-[320px] lg:min-h-[520px] flex items-center justify-center p-10 sm:p-14">
+            <div className="w-full max-w-[260px] rounded-[38px] bg-[#1A1A1A] p-2 shadow-[0_24px_60px_-20px_rgba(46,106,59,0.5)]">
+              <div className="relative aspect-[9/19.5] overflow-hidden rounded-[30px] bg-white">
+                <Image
+                  src="/images/screenshot-yonima-plus-home.png"
+                  alt="Capture d'écran de l'application Yonima Plus : recherche de restaurants et suivi de commande à Dakar"
+                  fill
+                  sizes="260px"
+                  className="object-cover object-top"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -200,8 +210,14 @@ export default function AppsPage() {
       {/* Bloc 2 — Yonima Rider (Livreur), image à gauche */}
       <section className="max-w-[1536px] mx-auto px-6 sm:px-10 lg:px-[72px] pb-7">
         <div className="grid grid-cols-1 lg:grid-cols-2 bg-white border border-[#EDF1EF] rounded-[26px] overflow-hidden">
-          <div className="order-2 lg:order-1 bg-[#E4E9E6] min-h-[320px] lg:min-h-[440px] flex items-center justify-center text-[13px] font-medium text-[#A8ADAA] p-8 text-center">
-            Photo — livreur Yonima en scooter, Dakar
+          <div className="order-2 lg:order-1 relative bg-[#E4E9E6] min-h-[320px] lg:min-h-[440px]">
+            <Image
+              src="/images/photo-rider-dakar.png"
+              alt="Livreur Yonima en veste verte, casque sur la tête, tenant une commande à Dakar"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-top"
+            />
           </div>
           <div className="order-1 lg:order-2 p-8 sm:p-14 flex flex-col gap-5">
             <div className="flex items-center gap-4">
@@ -305,8 +321,14 @@ export default function AppsPage() {
               </span>
             </div>
           </div>
-          <div className="bg-[#E4E9E6] min-h-[320px] lg:min-h-[440px] flex items-center justify-center text-[13px] font-medium text-[#A8ADAA] p-8 text-center">
-            Photo — commer&ccedil;ante, march&eacute; de Dakar
+          <div className="relative bg-[#E4E9E6] min-h-[320px] lg:min-h-[440px]">
+            <Image
+              src="/images/photo-commercante-dakar.png"
+              alt="Commerçante sénégalaise consultant l'application Yonima Vendeur sur son étal au marché de Dakar"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
