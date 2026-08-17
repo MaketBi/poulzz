@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
@@ -34,43 +33,41 @@ export function Header() {
   const showDarkMode = isHome && !isScrolled;
 
   return (
-    <header className="fixed top-4 left-4 right-4 z-50">
+    <header className="fixed top-0 left-0 right-0 z-50 pt-5">
       <nav
         className={cn(
-          "max-w-7xl mx-auto rounded-2xl px-4 sm:px-6 lg:px-8 transition-all duration-300",
+          "w-full max-w-[1536px] mx-auto rounded-full border backdrop-blur-md transition-all duration-300 pl-[72px] pr-[24px] py-[15px]",
           showDarkMode
-            ? "bg-white/[0.06] backdrop-blur-md border border-white/[0.08] shadow-[0_8px_32px_rgba(0,0,0,0.3)]"
-            : "bg-white/90 backdrop-blur-md shadow-lg border border-gray-200/50"
+            ? "bg-white/[0.07] border-white/[0.14]"
+            : "bg-white border-[#EDF1EF] shadow-sm"
         )}
       >
-        <div className="flex items-center justify-between h-16 lg:h-18">
-          <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/images/logo.png"
-              alt="Poulzz"
-              width={180}
-              height={50}
+        <div className="flex items-center gap-8">
+          <Link href="/" className="flex items-center">
+            <span
               className={cn(
-                "h-12 lg:h-14 w-auto transition-all duration-300",
-                showDarkMode && "brightness-0 invert"
+                "text-[24px] font-bold tracking-[-0.04em] transition-colors duration-300",
+                showDarkMode ? "text-white" : "text-[#2E6A3B]"
               )}
-            />
+            >
+              poulzz<span className="text-[#31CC71]">.</span>
+            </span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-1 ml-auto">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  "text-sm font-medium transition-colors",
+                  "text-[17px] font-medium px-[18px] py-3 rounded-full transition-colors",
                   showDarkMode
                     ? pathname === item.href
                       ? "text-[#31CC71]"
-                      : "text-white/70 hover:text-white"
+                      : "text-white/80 hover:bg-white/10"
                     : pathname === item.href
-                      ? "text-[#31CC71]"
-                      : "text-[#1F492E]/70 hover:text-[#1F492E]"
+                      ? "text-[#2E6A3B]"
+                      : "text-[#1A1A1A] hover:bg-[#2E6A3B]/[0.07]"
                 )}
               >
                 {item.name}
@@ -82,10 +79,10 @@ export function Header() {
             <Link
               href="/contact"
               className={cn(
-                "inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full transition-all duration-200 active:scale-[0.98] cursor-pointer",
+                "inline-flex items-center justify-center px-[28px] py-[15px] text-[16px] font-semibold rounded-full transition-all duration-200 active:scale-[0.98] cursor-pointer",
                 showDarkMode
-                  ? "text-zinc-950 bg-[#31CC71] hover:bg-[#28b862]"
-                  : "text-white bg-[#D4500A] hover:bg-[#B8440A]"
+                  ? "text-[#006D36] bg-[#31CC71] hover:brightness-105"
+                  : "text-white bg-[#2E6A3B] hover:bg-[#006D36]"
               )}
             >
               Nous contacter
@@ -95,8 +92,8 @@ export function Header() {
           <button
             type="button"
             className={cn(
-              "md:hidden p-2 cursor-pointer transition-colors",
-              showDarkMode ? "text-white" : "text-[#1F492E]"
+              "md:hidden ml-auto p-2 cursor-pointer transition-colors",
+              showDarkMode ? "text-white" : "text-[#1A1A1A]"
             )}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
@@ -117,13 +114,9 @@ export function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center"
             >
-              <Image
-                src="/images/logo.png"
-                alt="Poulzz"
-                width={180}
-                height={50}
-                className="h-12 w-auto brightness-0 invert"
-              />
+              <span className="text-2xl font-bold tracking-[-0.04em] text-white">
+                poulzz<span className="text-[#31CC71]">.</span>
+              </span>
             </Link>
             <button
               type="button"

@@ -1,14 +1,42 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F5F1EB;
-  --foreground: #1F492E;
-  --primary: #D4500A;
-  --primary-light: #FDF0E8;
+  /* =========================================================
+     Yonima / Poulzz Design System — signature greens
+     (remplace l'ancien orange par le vert forêt de marque)
+     ========================================================= */
+  --green-forest: #2E6A3B;   /* marque : logo, structure, CTA principal */
+  --green-electric: #31CC71; /* accent : highlights, le "+", promo */
+  --green-deep: #006D36;     /* états pressés, texte sur vert clair */
+  --green-50: #F2F8F4;
+  --green-100: #EAF9F0;
+  --green-200: #BEEBD1;
+
+  /* Neutrals / surfaces */
+  --bg-page: #F8FAFC;
+  --bg-warm: #FCF9F8;
+  --neutral-100: #F1F4F2;
+  --neutral-200: #E4E9E6;
+  --neutral-300: #EDF1EF;
+  --neutral-500: #A8ADAA;
+
+  /* Text */
+  --ink: #1A1A1A;
+  --ink-muted: #7A7A7A;
+
+  /* =========================================================
+     Aliases historiques — repointés sur la charte verte pour
+     que le code existant hérite automatiquement des bonnes
+     couleurs. --primary/--orange ne sont plus oranges.
+     ========================================================= */
+  --background: #FCF9F8;      /* bg-warm du design system (maquette Poulzz Site) */
+  --foreground: #1A1A1A;
+  --primary: #2E6A3B;        /* était #D4500A (orange) */
+  --primary-light: #EAF9F0;
   --dark-green: #1F492E;
   --electric-green: #31CC71;
-  --orange: #D4500A;
-  --cream: #F5F1EB;
+  --orange: #2E6A3B;         /* alias legacy repointé sur le vert forêt */
+  --cream: #F8FAFC;          /* alias legacy repointé sur le fond clair (plus de crème) */
   --skoolbi: #7C3AED;
   --senwaapi: #25d366;
 }
@@ -24,6 +52,17 @@
   --color-cream: var(--cream);
   --color-skoolbi: var(--skoolbi);
   --color-senwaapi: var(--senwaapi);
+  --color-green-forest: var(--green-forest);
+  --color-green-electric: var(--green-electric);
+  --color-green-deep: var(--green-deep);
+  --color-green-50: var(--green-50);
+  --color-green-100: var(--green-100);
+  --color-green-200: var(--green-200);
+  --color-bg-warm: var(--bg-warm);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-300: var(--neutral-300);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
   --font-sans: var(--font-outfit);
   --font-serif: var(--font-fraunces);
   --font-mono: var(--font-geist-mono);
@@ -88,9 +127,9 @@ html {
   }
 }
 
-/* Gradient text */
+/* Gradient text — vert forêt → vert électrique (charte Yonima) */
 .gradient-text {
-  background: linear-gradient(135deg, #D4500A 0%, #E8A020 100%);
+  background: linear-gradient(135deg, #2E6A3B 0%, #31CC71 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -98,19 +137,19 @@ html {
 
 /* Gradient utilities */
 .gradient-dark-green {
-  background: linear-gradient(135deg, #E8A020 0%, #121212 100%);
+  background: linear-gradient(135deg, #31CC71 0%, #0B0F0C 100%);
 }
 
 .gradient-green {
-  background: linear-gradient(135deg, #EED6A4 0%, #2D1A0E 100%);
+  background: linear-gradient(135deg, #BEEBD1 0%, #0B0F0C 100%);
 }
 
 .gradient-orange {
-  background: linear-gradient(135deg, #D4500A 0%, #2D1A0E 100%);
+  background: linear-gradient(135deg, #2E6A3B 0%, #0B0F0C 100%);
 }
 
 .gradient-amber {
-  background: linear-gradient(135deg, #EED6A4 0%, #E3891A 100%);
+  background: linear-gradient(135deg, #BEEBD1 0%, #2E6A3B 100%);
 }
 
 /* =============================================================
@@ -174,7 +213,7 @@ html {
 }
 
 .legal-content a {
-  color: #D4500A;
+  color: #2E6A3B;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
@@ -182,7 +221,7 @@ html {
 }
 
 .legal-content a:hover {
-  text-decoration-color: rgba(212, 80, 10, 0.4);
+  text-decoration-color: rgba(46, 106, 59, 0.4);
 }
 
 .legal-content ul,
@@ -207,7 +246,7 @@ html {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #D4500A;
+  background-color: #2E6A3B;
 }
 
 .legal-content ol {
@@ -238,7 +277,7 @@ html {
 .legal-content blockquote {
   margin: 1.5em 0;
   padding: 0.5em 0 0.5em 1.25rem;
-  border-left: 3px solid #D4500A;
+  border-left: 3px solid #2E6A3B;
   font-style: italic;
   color: #4a4a4a;
   max-width: 68ch;
@@ -278,9 +317,9 @@ html {
 }
 
 .legal-toc-link:hover {
-  color: #D4500A;
-  border-left-color: rgba(212, 80, 10, 0.3);
-  background-color: rgba(212, 80, 10, 0.03);
+  color: #2E6A3B;
+  border-left-color: rgba(46, 106, 59, 0.3);
+  background-color: rgba(46, 106, 59, 0.03);
 }
 
 .legal-toc-link[data-preamble="true"] {

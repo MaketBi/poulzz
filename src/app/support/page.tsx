@@ -5,6 +5,7 @@ import {
   Mail,
   FileText,
   ShieldCheck,
+  UserX,
   ChevronRight,
 } from "lucide-react";
 
@@ -31,8 +32,8 @@ const contactItems = [
   {
     href: EMAIL_URL,
     icon: Mail,
-    iconColor: "text-[#D4500A]",
-    iconBg: "bg-[#D4500A]/10",
+    iconColor: "text-[#2E6A3B]",
+    iconBg: "bg-[#2E6A3B]/10",
     label: "Nous ecrire par email",
     subtitle: "contact@poulzz.com",
     external: true,
@@ -50,6 +51,11 @@ const legalItems = [
     icon: ShieldCheck,
     label: "Politique de confidentialite",
   },
+  {
+    href: "/delete-account",
+    icon: UserX,
+    label: "Supprimer mon compte",
+  },
 ];
 
 export default function SupportPage() {
@@ -58,6 +64,9 @@ export default function SupportPage() {
       <div className="max-w-2xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="mb-10">
+          <div className="text-xs font-semibold tracking-[0.14em] text-[#2E6A3B] mb-4">
+            AIDE &amp; SUPPORT — YONIMA
+          </div>
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#1F492E]">
             Aide &amp; Support
           </h1>

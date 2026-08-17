@@ -34,12 +34,12 @@ export function LegalPageShell({
   const hasToc = tableOfContents && tableOfContents.length > 0;
 
   return (
-    <div className="bg-[#F5F1EB] pt-16 lg:pt-20">
+    <div className="bg-[#F8FAFC] pt-16 lg:pt-20">
       {/* Header band */}
-      <header className="border-b border-[#1F492E]/10 bg-[#F5F1EB]">
+      <header className="border-b border-[#1F492E]/10 bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12 lg:py-16">
           <div className="flex items-center gap-3 mb-6">
-            <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#D4500A]" />
+            <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#2E6A3B]" />
             <p className="text-xs font-semibold text-[#1F492E]/70 uppercase tracking-[0.18em]">
               {appLabel}
             </p>
@@ -157,10 +157,10 @@ export function LegalPageShell({
                     <li key={v.href}>
                       <Link
                         href={v.href}
-                        className="group inline-flex items-center gap-2 text-[#1F492E] hover:text-[#D4500A] transition-colors"
+                        className="group inline-flex items-center gap-2 text-[#1F492E] hover:text-[#2E6A3B] transition-colors"
                       >
                         <svg
-                          className="w-4 h-4 text-[#D4500A]"
+                          className="w-4 h-4 text-[#2E6A3B]"
                           viewBox="0 0 20 20"
                           fill="currentColor"
                           aria-hidden="true"
@@ -171,7 +171,7 @@ export function LegalPageShell({
                             clipRule="evenodd"
                           />
                         </svg>
-                        <span className="underline decoration-[#1F492E]/20 group-hover:decoration-[#D4500A] underline-offset-4">
+                        <span className="underline decoration-[#1F492E]/20 group-hover:decoration-[#2E6A3B] underline-offset-4">
                           {v.label}
                         </span>
                       </Link>

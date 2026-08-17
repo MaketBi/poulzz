@@ -11,6 +11,8 @@ interface TubesCursorProps {
   lightIntensity?: number;
   /** Extra CSS classes for the wrapper */
   className?: string;
+  /** Extra CSS classes for the content layer (overrides default centering) */
+  contentClassName?: string;
   /** Children rendered above the canvas */
   children?: React.ReactNode;
 }
@@ -43,6 +45,7 @@ export default function TubesCursor({
   lightColors = ["#21d4fd", "#b721ff", "#f4d03f", "#11cdef"],
   lightIntensity = 200,
   className = "",
+  contentClassName = "min-h-[100dvh] flex flex-col items-start justify-center",
   children,
 }: TubesCursorProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -104,9 +107,7 @@ export default function TubesCursor({
 
       {/* Content layer */}
       {children && (
-        <div className="relative z-[1] min-h-[100dvh] flex flex-col items-start justify-center">
-          {children}
-        </div>
+        <div className={`relative z-[1] ${contentClassName}`}>{children}</div>
       )}
     </div>
   );

@@ -159,36 +159,46 @@ export default function SkoolbiPage() {
     <div className="pt-28 lg:pt-32">
       {/* Hero Section */}
       <section ref={heroRef} className="fade-in-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="bg-[#7C3AED]/10 rounded-2xl p-3">
-              <GraduationCap className="w-8 h-8 text-[#7C3AED]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.12em] text-[#7C3AED] bg-[#7C3AED]/10 rounded-full px-3.5 py-2 mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED]" />
+              ERP SCOLAIRE
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-[72px] font-bold tracking-[-0.045em] leading-[0.98] text-[#1F492E] mb-6">
+              L&apos;école, enfin bien{" "}
+              <span className="text-[#2E6A3B]">
+                gérée<span className="text-[#31CC71]">.</span>
+              </span>
+            </h1>
+            <p className="text-lg sm:text-xl font-light text-[#1F492E]/70 max-w-[520px] mb-9">
+              Notes, paiements, présences et communication parents — une seule
+              plateforme pour toute l&apos;école.
+            </p>
+            <div className="flex flex-col sm:flex-row items-start gap-3.5">
+              <a
+                href="https://azyflow.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-[30px] py-[17px] bg-[#2E6A3B] hover:bg-[#006D36] text-white text-base font-semibold rounded-[14px] transition-colors"
+              >
+                Essai 30 jours ↗
+              </a>
+              <a
+                href="https://azyflow.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-[30px] py-[17px] bg-white border border-[#E4E9E6] text-[#1A1A1A] text-base font-semibold rounded-[14px] hover:border-[#2E6A3B]/40 transition-colors"
+              >
+                Voir une démo
+              </a>
             </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#1F492E] mb-6">
-            L'école, enfin bien gérée.
-          </h1>
-          <p className="text-lg sm:text-xl text-[#1F492E]/70 max-w-2xl mx-auto mb-10">
-            Toute votre école en une seule plateforme : bulletins, paiements,
-            présences, emploi du temps, communication parents — tout est là.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://azyflow.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-3 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-semibold rounded-full transition-colors"
-            >
-              Essai gratuit 30 jours
-            </a>
-            <a
-              href="https://azyflow.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-3 border-2 border-[#7C3AED] text-[#7C3AED] font-semibold rounded-full hover:bg-[#7C3AED]/5 transition-colors"
-            >
-              Voir une démo
-            </a>
+          <div className="bg-[#E4E9E6] rounded-[26px] h-[300px] lg:h-[360px] flex items-center justify-center text-[13px] font-medium text-[#A8ADAA] px-6 text-center">
+            <span className="flex flex-col items-center gap-3">
+              <GraduationCap className="w-10 h-10 text-[#7C3AED]/50" />
+              Capture — tableau de bord Skoolbi
+            </span>
           </div>
         </div>
       </section>
@@ -304,9 +314,9 @@ export default function SkoolbiPage() {
               href="https://azyflow.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-full px-8 py-3 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-semibold rounded-full transition-colors"
+              className="inline-flex items-center justify-center w-full px-8 py-3 bg-[#2E6A3B] hover:bg-[#006D36] text-white font-semibold rounded-full transition-colors"
             >
-              Commencer l'essai gratuit
+              Commencer l&apos;essai gratuit
             </a>
           </div>
         </div>
@@ -316,7 +326,7 @@ export default function SkoolbiPage() {
       <section ref={testimonialsRef} className="fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#1F492E] text-center mb-12">
-            Ce qu'ils en disent
+            Ce qu&apos;ils en disent
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.map((testimonial, index) => (

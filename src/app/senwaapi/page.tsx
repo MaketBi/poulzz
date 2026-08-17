@@ -12,7 +12,6 @@ import {
   CreditCard,
   Globe,
   Lock,
-  Terminal,
   Check,
   ChevronDown,
   ArrowRight,
@@ -145,7 +144,6 @@ export default function SenWaAPIPage() {
   const heroRef = useScrollAnimation();
   const highlightsRef = useScrollAnimation();
   const featuresRef = useScrollAnimation();
-  const codeRef = useScrollAnimation();
   const pricingRef = useScrollAnimation();
   const faqRef = useScrollAnimation();
   const ctaRef = useScrollAnimation();
@@ -154,48 +152,79 @@ export default function SenWaAPIPage() {
     <div className="pt-28 lg:pt-32">
       {/* Hero Section */}
       <section ref={heroRef} className="fade-in-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
-          <div className="flex justify-center mb-6">
-            <Image
-              src="/images/senwaapi-icon.svg"
-              alt="SenWaAPI"
-              width={64}
-              height={64}
-              className="w-16 h-16 rounded-2xl"
-            />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-14 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.12em] text-[#1F492E] bg-[#25d366]/10 rounded-full px-3.5 py-2 mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#25d366]" />
+              API WHATSAPP
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-[72px] font-bold tracking-[-0.045em] leading-[0.98] text-[#1F492E] mb-6">
+              Déployez WhatsApp{" "}
+              <span className="text-[#2E6A3B]">
+                tranquillement<span className="text-[#31CC71]">.</span>
+              </span>
+            </h1>
+            <p className="text-lg sm:text-xl font-light text-[#1F492E]/70 max-w-[520px] mb-3">
+              Messages transactionnels, codes OTP et webhooks — une API simple,
+              facturée en FCFA ou en euros.
+            </p>
+            <p className="text-sm text-[#1F492E]/50 mb-9">
+              REST, Webhooks et serveur MCP.
+            </p>
+            <div className="flex flex-col sm:flex-row items-start gap-3.5">
+              <a
+                href="https://senwaapi.com/register"
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center justify-center px-[30px] py-[17px] bg-[#2E6A3B] hover:bg-[#006D36] text-white text-base font-semibold rounded-[14px] transition-colors"
+              >
+                Créer un compte ↗
+              </a>
+              <a
+                href="https://senwaapi.com"
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center justify-center px-[30px] py-[17px] bg-white border border-[#E4E9E6] text-[#1A1A1A] text-base font-semibold rounded-[14px] hover:border-[#2E6A3B]/40 transition-colors"
+              >
+                Lire la doc
+              </a>
+            </div>
+            <p className="mt-6 text-sm text-[#1F492E]/40">
+              Essai gratuit 15 jours, sans carte bancaire
+            </p>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#1F492E] mb-4">
-            Deployez WhatsApp tranquillement.
-          </h1>
-          <p className="text-lg sm:text-xl text-[#1F492E]/70 max-w-2xl mx-auto mb-4">
-            API WhatsApp pour developpeurs. Envoyez messages, medias et OTP
-            depuis votre code en 30 secondes — sans paperasse Meta.
-          </p>
-          <p className="text-sm text-[#1F492E]/50 mb-10">
-            REST, Webhooks et serveur MCP.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://senwaapi.com/register"
-              target="_blank"
-              rel="noopener"
-              className="inline-flex items-center justify-center px-8 py-3 bg-[#25d366] hover:bg-[#1fb855] text-white font-semibold rounded-full transition-colors"
-            >
-              Essayer gratuitement
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </a>
-            <a
-              href="https://senwaapi.com"
-              target="_blank"
-              rel="noopener"
-              className="inline-flex items-center justify-center px-8 py-3 border-2 border-[#25d366] text-[#25d366] font-semibold rounded-full hover:bg-[#25d366]/5 transition-colors"
-            >
-              Decouvrir SenWaAPI
-            </a>
+          {/* Terminal — exemple curl OTP */}
+          <div className="bg-[#0B0F0C] rounded-[26px] p-7 lg:p-8 font-mono text-[13.5px] leading-[1.9] text-white/85 overflow-x-auto">
+            <div className="flex gap-[7px] mb-[18px]">
+              <span className="w-[11px] h-[11px] rounded-full bg-white/20" />
+              <span className="w-[11px] h-[11px] rounded-full bg-white/20" />
+              <span className="w-[11px] h-[11px] rounded-full bg-[#31CC71]" />
+            </div>
+            <div>
+              <span className="text-[#31CC71]">curl</span> -X POST
+              https://senwaapi.com/api/send \
+            </div>
+            <div>
+              {"  "}-H{" "}
+              <span className="text-[#BEEBD1]">
+                &quot;Authorization: Bearer $TOKEN&quot;
+              </span>{" "}
+              \
+            </div>
+            <div>
+              {"  "}-d{" "}
+              <span className="text-[#BEEBD1]">
+                &apos;&#123;&quot;to&quot;:&quot;+221762957097&quot;,
+              </span>
+            </div>
+            <div>
+              {"    "}
+              <span className="text-[#BEEBD1]">
+                &quot;template&quot;:&quot;otp&quot;,&quot;code&quot;:&quot;4821&quot;&#125;&apos;
+              </span>
+            </div>
+            <div className="mt-4 text-white/45">→ 200 OK · délivré en 1,2 s</div>
           </div>
-          <p className="mt-6 text-sm text-[#1F492E]/40">
-            Essai gratuit 15 jours, sans carte bancaire
-          </p>
         </div>
       </section>
 
@@ -248,58 +277,6 @@ export default function SenWaAPIPage() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Code Example */}
-      <section ref={codeRef} className="fade-in-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-[#0a0a0a] rounded-3xl p-8 lg:p-12 overflow-hidden">
-            <div className="flex items-center gap-3 mb-6">
-              <Terminal className="w-5 h-5 text-[#25d366]" />
-              <span className="text-white/60 text-sm font-medium">
-                Envoyez un message en une requete
-              </span>
-            </div>
-            <pre className="text-sm sm:text-base overflow-x-auto">
-              <code className="text-white/90">
-                <span className="text-[#25d366]">curl</span>
-                {" -X POST https://senwaapi.com/api/send \\\n"}
-                {"  -H "}
-                <span className="text-amber-400">
-                  {'"Authorization: Bearer YOUR_TOKEN"'}
-                </span>
-                {" \\\n"}
-                {"  -H "}
-                <span className="text-amber-400">
-                  {'"Content-Type: application/json"'}
-                </span>
-                {" \\\n"}
-                {"  -d "}
-                <span className="text-amber-400">{"'"}</span>
-                <span className="text-white/70">{"{"}</span>
-                {"\n"}
-                {"    "}
-                <span className="text-sky-400">{'"to"'}</span>
-                {": "}
-                <span className="text-amber-400">{'"221770001122"'}</span>
-                {",\n"}
-                {"    "}
-                <span className="text-sky-400">{'"message"'}</span>
-                {": "}
-                <span className="text-amber-400">
-                  {'"Votre code : 4829"'}
-                </span>
-                {"\n"}
-                <span className="text-white/70">{"  }"}</span>
-                <span className="text-amber-400">{"'"}</span>
-              </code>
-            </pre>
-            <p className="mt-6 text-white/40 text-sm">
-              Compatible Node.js, Python, PHP, n8n, Make, Zapier — tout ce qui
-              parle HTTP.
-            </p>
           </div>
         </div>
       </section>
