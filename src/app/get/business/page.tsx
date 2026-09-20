@@ -39,16 +39,8 @@ export const metadata: Metadata = {
     siteName: "Poulzz",
     locale: "fr_SN",
     type: "website",
-    images: [
-      {
-        url: "/images/app-yonima-vendeur.png",
-        width: 602,
-        height: 607,
-        alt: "Icône de l'application Yonima Business",
-      },
-    ],
   },
-  twitter: { card: "summary" },
+  twitter: { card: "summary_large_image" },
 };
 
 // La detection depend du User-Agent de la requete : jamais mise en cache.
@@ -81,11 +73,19 @@ export default async function GetBusinessPage() {
   return (
     <div className="pt-28 lg:pt-32 min-h-screen bg-[#F8FAFC]">
       <section className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
-        <p className="text-sm font-medium text-[#2E6A3B] tracking-wider uppercase">
+        <Image
+          src="/images/logo-yonima-vendor-green.svg"
+          alt="Yonima Business"
+          width={843}
+          height={133}
+          priority
+          className="mx-auto w-72 sm:w-80 h-auto"
+        />
+        <p className="mt-8 text-sm font-medium text-[#2E6A3B] tracking-wider uppercase">
           Application Business
         </p>
         <h1 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight text-[#1F492E]">
-          Téléchargez <span className="gradient-text">Yonima Business</span>
+          Téléchargez <span className="gradient-text">l&apos;application</span>
         </h1>
         <p className="mt-6 text-lg text-[#1F492E]/60 max-w-xl mx-auto">
           Gérez votre commerce, vos commandes et vos assistants en temps réel.
