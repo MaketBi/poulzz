@@ -27,10 +27,28 @@ const STORE_LINKS = {
 } as const satisfies { ios: string | null; android: string | null };
 
 export const metadata: Metadata = {
-  title: "Télécharger Yonima Business — Poulzz",
-  description:
-    "Téléchargez l'application Yonima Business pour gérer votre commerce, vos commandes et vos assistants au Sénégal. Disponible sur App Store et Google Play.",
+  title: "Télécharger l'application Yonima Business — Poulzz",
+  description: "Gérez votre commerce, vos commandes et vos assistants au Sénégal. Disponible sur App Store et Google Play.",
   robots: { index: false, follow: false },
+  // openGraph n'est PAS fusionne avec celui du layout : tout redeclarer ici,
+  // sinon WhatsApp affiche le titre generique du site.
+  openGraph: {
+    title: "Télécharger l'application Yonima Business",
+    description: "Gérez votre commerce, vos commandes et vos assistants au Sénégal. Disponible sur App Store et Google Play.",
+    url: "https://www.poulzz.com/get/business",
+    siteName: "Poulzz",
+    locale: "fr_SN",
+    type: "website",
+    images: [
+      {
+        url: "/images/app-yonima-vendeur.png",
+        width: 602,
+        height: 607,
+        alt: "Icône de l'application Yonima Business",
+      },
+    ],
+  },
+  twitter: { card: "summary" },
 };
 
 // La detection depend du User-Agent de la requete : jamais mise en cache.

@@ -22,10 +22,28 @@ const STORE_LINKS = {
 } as const satisfies { ios: string | null; android: string | null };
 
 export const metadata: Metadata = {
-  title: "Télécharger Yonima Rider — Poulzz",
-  description:
-    "Téléchargez l'application Yonima Rider pour effectuer vos livraisons au Sénégal. Disponible sur App Store et Google Play.",
+  title: "Télécharger l'application Yonima Rider — Poulzz",
+  description: "Effectuez vos livraisons au Sénégal et suivez vos gains. Disponible sur App Store et Google Play.",
   robots: { index: false, follow: false },
+  // openGraph n'est PAS fusionne avec celui du layout : tout redeclarer ici,
+  // sinon WhatsApp affiche le titre generique du site.
+  openGraph: {
+    title: "Télécharger l'application Yonima Rider",
+    description: "Effectuez vos livraisons au Sénégal et suivez vos gains. Disponible sur App Store et Google Play.",
+    url: "https://www.poulzz.com/get/rider",
+    siteName: "Poulzz",
+    locale: "fr_SN",
+    type: "website",
+    images: [
+      {
+        url: "/images/app-yonima-rider.png",
+        width: 602,
+        height: 607,
+        alt: "Icône de l'application Yonima Rider",
+      },
+    ],
+  },
+  twitter: { card: "summary" },
 };
 
 // La detection depend du User-Agent de la requete : jamais mise en cache.

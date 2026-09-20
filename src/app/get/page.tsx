@@ -17,10 +17,28 @@ const STORE_LINKS = {
 } as const;
 
 export const metadata: Metadata = {
-  title: "Télécharger Yonima Plus — Poulzz",
-  description:
-    "Téléchargez l'application Yonima Plus pour commander vos repas, courses et produits essentiels au Sénégal. Disponible sur App Store et Google Play.",
+  title: "Télécharger l'application Yonima Plus — Poulzz",
+  description: "Commandez vos repas, courses et produits essentiels au Sénégal. Disponible sur App Store et Google Play.",
   robots: { index: false, follow: false },
+  // openGraph n'est PAS fusionne avec celui du layout : tout redeclarer ici,
+  // sinon WhatsApp affiche le titre generique du site.
+  openGraph: {
+    title: "Télécharger l'application Yonima Plus",
+    description: "Commandez vos repas, courses et produits essentiels au Sénégal. Disponible sur App Store et Google Play.",
+    url: "https://www.poulzz.com/get",
+    siteName: "Poulzz",
+    locale: "fr_SN",
+    type: "website",
+    images: [
+      {
+        url: "/images/app-yonima-plus.png",
+        width: 602,
+        height: 607,
+        alt: "Icône de l'application Yonima Plus",
+      },
+    ],
+  },
+  twitter: { card: "summary" },
 };
 
 // La detection depend du User-Agent de la requete : jamais mise en cache.
