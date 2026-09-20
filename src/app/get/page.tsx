@@ -29,16 +29,8 @@ export const metadata: Metadata = {
     siteName: "Poulzz",
     locale: "fr_SN",
     type: "website",
-    images: [
-      {
-        url: "/images/app-yonima-plus.png",
-        width: 602,
-        height: 607,
-        alt: "Icône de l'application Yonima Plus",
-      },
-    ],
   },
-  twitter: { card: "summary" },
+  twitter: { card: "summary_large_image" },
 };
 
 // La detection depend du User-Agent de la requete : jamais mise en cache.
@@ -69,11 +61,19 @@ export default async function GetPage() {
   return (
     <div className="pt-28 lg:pt-32 min-h-screen bg-[#F8FAFC]">
       <section className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
-        <p className="text-sm font-medium text-[#2E6A3B] tracking-wider uppercase">
+        <Image
+          src="/images/logo-yonima-plus-green.svg"
+          alt="Yonima Plus"
+          width={462}
+          height={136}
+          priority
+          className="mx-auto w-56 sm:w-64 h-auto"
+        />
+        <p className="mt-8 text-sm font-medium text-[#2E6A3B] tracking-wider uppercase">
           Application Client
         </p>
         <h1 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight text-[#1F492E]">
-          Téléchargez <span className="gradient-text">Yonima Plus</span>
+          Téléchargez <span className="gradient-text">l&apos;application</span>
         </h1>
         <p className="mt-6 text-lg text-[#1F492E]/60 max-w-xl mx-auto">
           Commandez vos repas, courses et produits essentiels avec un suivi en
