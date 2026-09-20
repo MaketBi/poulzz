@@ -17,6 +17,9 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
+  // Resout les URLs relatives (og:image, icones) en absolu : indispensable
+  // pour les apercus WhatsApp / iMessage / LinkedIn.
+  metadataBase: new URL("https://www.poulzz.com"),
   title: "Poulzz — La tech sénégalaise qui simplifie votre quotidien",
   description:
     "Poulzz développe des solutions numériques adaptées aux réalités du Sénégal. Découvrez Yonima (livraison), Skoolbi (gestion scolaire) et SenWaAPI (API WhatsApp).",
@@ -41,11 +44,12 @@ export const metadata: Metadata = {
     title: "Poulzz — La tech sénégalaise qui simplifie votre quotidien",
     description:
       "Un écosystème de solutions numériques conçues au Sénégal, pour le Sénégal. Yonima (livraison), Skoolbi (gestion scolaire) et SenWaAPI (API WhatsApp).",
-    url: "https://poulzz.com",
+    url: "https://www.poulzz.com",
     siteName: "Poulzz",
     locale: "fr_SN",
     type: "website",
   },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({

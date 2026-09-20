@@ -1,6 +1,7 @@
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 /**
  * Liens des stores — SOURCE DE VERITE UNIQUE pour l'app Yonima Business.
@@ -12,20 +13,34 @@ import type { Metadata } from "next";
  * Bundle IDs de prod : iOS com.yonima.vendor · Android com.yonima.business
  * Apple ID (App Store Connect) : 6758053728
  *
- * iOS : lien renseigne (fiche approuvee, a publier depuis App Store Connect).
- * Android : deja publie (com.yonima.business).
+ * Les deux stores sont publies. Le QR code (public/qr-yonima-business-get.*)
+ * encode https://www.poulzz.com/get/business et ne change JAMAIS.
  */
 const STORE_LINKS = {
-  ios: "https://apps.apple.com/app/id6758053728" as string | null,
+  ios: "https://apps.apple.com/fr/app/yonima-business/id6758053728" as
+    | string
+    | null,
   android:
-    "https://play.google.com/store/apps/details?id=com.yonima.business&hl=fr",
+    "https://play.google.com/store/apps/details?id=com.yonima.business&pcampaignid=web_share" as
+    | string
+    | null,
 } as const satisfies { ios: string | null; android: string | null };
 
 export const metadata: Metadata = {
-  title: "Télécharger Yonima Business — Poulzz",
-  description:
-    "Téléchargez l'application Yonima Business pour gérer votre commerce, vos commandes et vos assistants au Sénégal. Disponible sur App Store et Google Play.",
+  title: "Télécharger l'application Yonima Business — Poulzz",
+  description: "Gérez votre commerce, vos commandes et vos assistants au Sénégal. Disponible sur App Store et Google Play.",
   robots: { index: false, follow: false },
+  // openGraph n'est PAS fusionne avec celui du layout : tout redeclarer ici,
+  // sinon WhatsApp affiche le titre generique du site.
+  openGraph: {
+    title: "Télécharger l'application Yonima Business",
+    description: "Gérez votre commerce, vos commandes et vos assistants au Sénégal. Disponible sur App Store et Google Play.",
+    url: "https://www.poulzz.com/get/business",
+    siteName: "Poulzz",
+    locale: "fr_SN",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 // La detection depend du User-Agent de la requete : jamais mise en cache.
@@ -58,11 +73,19 @@ export default async function GetBusinessPage() {
   return (
     <div className="pt-28 lg:pt-32 min-h-screen bg-[#F8FAFC]">
       <section className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
-        <p className="text-sm font-medium text-[#2E6A3B] tracking-wider uppercase">
+        <Image
+          src="/images/logo-yonima-vendor-green.svg"
+          alt="Yonima Business"
+          width={843}
+          height={133}
+          priority
+          className="mx-auto w-72 sm:w-80 h-auto"
+        />
+        <p className="mt-8 text-sm font-medium text-[#2E6A3B] tracking-wider uppercase">
           Application Business
         </p>
         <h1 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight text-[#1F492E]">
-          Téléchargez <span className="gradient-text">Yonima Business</span>
+          Téléchargez <span className="gradient-text">l&apos;application</span>
         </h1>
         <p className="mt-6 text-lg text-[#1F492E]/60 max-w-xl mx-auto">
           Gérez votre commerce, vos commandes et vos assistants en temps réel.
@@ -110,6 +133,21 @@ export default async function GetBusinessPage() {
             La version iPhone arrive prochainement.
           </p>
         )}
+
+        <p className="mt-10 text-sm text-[#1F492E]/40">
+          Scannez ce code depuis votre téléphone pour être redirigé
+          automatiquement vers la bonne boutique.
+        </p>
+
+        <div className="mt-8 flex justify-center">
+          <Image
+            src="/qr-yonima-business-get.png"
+            alt="QR code de téléchargement Yonima Business"
+            width={220}
+            height={220}
+            className="rounded-2xl bg-white p-3 shadow-sm"
+          />
+        </div>
       </section>
     </div>
   );

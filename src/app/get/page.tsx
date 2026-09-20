@@ -17,10 +17,20 @@ const STORE_LINKS = {
 } as const;
 
 export const metadata: Metadata = {
-  title: "Télécharger Yonima Plus — Poulzz",
-  description:
-    "Téléchargez l'application Yonima Plus pour commander vos repas, courses et produits essentiels au Sénégal. Disponible sur App Store et Google Play.",
+  title: "Télécharger l'application Yonima Plus — Poulzz",
+  description: "Commandez vos repas, courses et produits essentiels au Sénégal. Disponible sur App Store et Google Play.",
   robots: { index: false, follow: false },
+  // openGraph n'est PAS fusionne avec celui du layout : tout redeclarer ici,
+  // sinon WhatsApp affiche le titre generique du site.
+  openGraph: {
+    title: "Télécharger l'application Yonima Plus",
+    description: "Commandez vos repas, courses et produits essentiels au Sénégal. Disponible sur App Store et Google Play.",
+    url: "https://www.poulzz.com/get",
+    siteName: "Poulzz",
+    locale: "fr_SN",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 // La detection depend du User-Agent de la requete : jamais mise en cache.
@@ -51,11 +61,19 @@ export default async function GetPage() {
   return (
     <div className="pt-28 lg:pt-32 min-h-screen bg-[#F8FAFC]">
       <section className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
-        <p className="text-sm font-medium text-[#2E6A3B] tracking-wider uppercase">
+        <Image
+          src="/images/logo-yonima-plus-green.svg"
+          alt="Yonima Plus"
+          width={462}
+          height={136}
+          priority
+          className="mx-auto w-56 sm:w-64 h-auto"
+        />
+        <p className="mt-8 text-sm font-medium text-[#2E6A3B] tracking-wider uppercase">
           Application Client
         </p>
         <h1 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight text-[#1F492E]">
-          Téléchargez <span className="gradient-text">Yonima Plus</span>
+          Téléchargez <span className="gradient-text">l&apos;application</span>
         </h1>
         <p className="mt-6 text-lg text-[#1F492E]/60 max-w-xl mx-auto">
           Commandez vos repas, courses et produits essentiels avec un suivi en

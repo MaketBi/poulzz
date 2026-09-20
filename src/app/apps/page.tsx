@@ -8,6 +8,12 @@ const YONIMA_PLUS = {
   appStore: "https://apps.apple.com/fr/app/yonima-plus/id6756845915",
 };
 
+const YONIMA_BUSINESS = {
+  playStore:
+    "https://play.google.com/store/apps/details?id=com.yonima.business&pcampaignid=web_share",
+  appStore: "https://apps.apple.com/fr/app/yonima-business/id6758053728",
+};
+
 const testimonials = [
   {
     rating: "4,8",
@@ -312,16 +318,44 @@ export default function AppsPage() {
                 </div>
               ))}
             </div>
-            <div className="mt-auto flex flex-wrap gap-2.5">
-              <span className="border border-[#E4E9E6] text-[#7A7A7A] text-[13px] font-semibold px-5 py-3 rounded-[14px]">
-                App Store &middot; bient&ocirc;t
-              </span>
-              <span className="border border-[#E4E9E6] text-[#7A7A7A] text-[13px] font-semibold px-5 py-3 rounded-[14px]">
-                Google Play &middot; bient&ocirc;t
-              </span>
+            {/* QR — moyen de téléchargement principal, AU-DESSUS des stores */}
+            <div className="flex items-center gap-4 sm:gap-[18px] bg-[#F2F8F4] border border-[#BEEBD1] rounded-[18px] p-[18px]">
+              <Image
+                src="/qr-yonima-business-get.png"
+                alt="QR de téléchargement Yonima Business"
+                width={104}
+                height={104}
+                className="w-[104px] h-[104px] flex-none rounded-lg bg-white border border-[#E4E9E6] p-1.5"
+              />
+              <div className="text-[15px] font-medium text-[#1A1A1A] leading-snug">
+                Scannez pour t&eacute;l&eacute;charger
+                <br />
+                <span className="font-normal text-[#7A7A7A]">
+                  iPhone ou Android, la bonne boutique s&apos;ouvre
+                </span>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={YONIMA_BUSINESS.appStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#2E6A3B] text-white text-sm font-semibold px-6 py-3.5 rounded-[14px] hover:bg-[#006D36] transition-colors"
+              >
+                App Store
+              </a>
+              <a
+                href={YONIMA_BUSINESS.playStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#2E6A3B] text-white text-sm font-semibold px-6 py-3.5 rounded-[14px] hover:bg-[#006D36] transition-colors"
+              >
+                Google Play
+              </a>
             </div>
           </div>
-          <div className="relative bg-[#E4E9E6] min-h-[320px] lg:min-h-[440px]">
+          <div className="relative bg-[#E4E9E6] min-h-[320px] lg:min-h-[520px]">
             <Image
               src="/images/photo-commercante-dakar.png"
               alt="Commerçante sénégalaise consultant l'application Yonima Vendeur sur son étal au marché de Dakar"
