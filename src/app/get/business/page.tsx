@@ -1,6 +1,7 @@
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 /**
  * Liens des stores — SOURCE DE VERITE UNIQUE pour l'app Yonima Business.
@@ -12,13 +13,17 @@ import type { Metadata } from "next";
  * Bundle IDs de prod : iOS com.yonima.vendor · Android com.yonima.business
  * Apple ID (App Store Connect) : 6758053728
  *
- * iOS : lien renseigne (fiche approuvee, a publier depuis App Store Connect).
- * Android : deja publie (com.yonima.business).
+ * Les deux stores sont publies. Le QR code (public/qr-yonima-business-get.*)
+ * encode https://www.poulzz.com/get/business et ne change JAMAIS.
  */
 const STORE_LINKS = {
-  ios: "https://apps.apple.com/app/id6758053728" as string | null,
+  ios: "https://apps.apple.com/fr/app/yonima-business/id6758053728" as
+    | string
+    | null,
   android:
-    "https://play.google.com/store/apps/details?id=com.yonima.business&hl=fr",
+    "https://play.google.com/store/apps/details?id=com.yonima.business&pcampaignid=web_share" as
+    | string
+    | null,
 } as const satisfies { ios: string | null; android: string | null };
 
 export const metadata: Metadata = {
@@ -110,6 +115,21 @@ export default async function GetBusinessPage() {
             La version iPhone arrive prochainement.
           </p>
         )}
+
+        <p className="mt-10 text-sm text-[#1F492E]/40">
+          Scannez ce code depuis votre téléphone pour être redirigé
+          automatiquement vers la bonne boutique.
+        </p>
+
+        <div className="mt-8 flex justify-center">
+          <Image
+            src="/qr-yonima-business-get.png"
+            alt="QR code de téléchargement Yonima Business"
+            width={220}
+            height={220}
+            className="rounded-2xl bg-white p-3 shadow-sm"
+          />
+        </div>
       </section>
     </div>
   );
