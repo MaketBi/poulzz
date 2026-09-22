@@ -12,7 +12,7 @@ import styles from "./scan.module.css";
  * contrainte forte = tout tient dans une hauteur d'ecran, sans defilement.
  */
 
-const WHATSAPP_NUMBER = "221762957097";
+const WHATSAPP_NUMBER = "221777433516";
 const WHATSAPP_TEXT = "Bonjour Yonima+, je viens de scanner votre QR code.";
 
 const LINKS = {
