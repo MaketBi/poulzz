@@ -3,6 +3,7 @@ import { Outfit, Fraunces } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import ChromeGate from "@/components/layout/ChromeGate";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -60,9 +61,13 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${outfit.variable} ${fraunces.variable} antialiased`}>
-        <Header />
+        <ChromeGate>
+          <Header />
+        </ChromeGate>
         <main>{children}</main>
-        <Footer />
+        <ChromeGate>
+          <Footer />
+        </ChromeGate>
       </body>
     </html>
   );
