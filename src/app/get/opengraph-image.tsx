@@ -56,8 +56,8 @@ export default async function OpenGraphImage() {
               maxWidth: 940,
             }}
           >
-            Repas, courses et essentiels livrés chez vous, suivi GPS et
-            paiement Wave.
+            Repas, courses et essentiels livrés chez vous, suivi GPS,
+            paiement Wave ou Orange Money.
           </div>
         </div>
 
