@@ -64,7 +64,7 @@ export default function ScanPage() {
           </h1>
           <p className={styles.sub}>
             Repas, courses et essentiels livrés dans tout Dakar. Suivi GPS,
-            paiement Wave.
+            paiement Wave ou Orange&nbsp;Money.
           </p>
         </header>
 
