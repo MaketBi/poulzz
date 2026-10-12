@@ -44,7 +44,7 @@ export default function ContactPage() {
               Contactez-nous
             </h1>
             <p className="mt-4 text-lg text-gray-600">
-              Une question, un partenariat, une demonstration ? Ecrivez-nous.
+              Une question, un partenariat, une démonstration ? Écrivez-nous.
             </p>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function ContactPage() {
                       <CheckCircle className="h-8 w-8 text-[#31CC71]" />
                     </div>
                     <p className="mt-6 text-lg font-medium text-white">
-                      Message envoye ! Nous vous repondrons rapidement.
+                      Message envoyé ! Nous vous répondrons rapidement.
                     </p>
                     <button
                       onClick={() => {
@@ -123,13 +123,13 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    {/* Telephone */}
+                    {/* Téléphone */}
                     <div>
                       <label
                         htmlFor="phone"
                         className="block text-sm font-medium text-white mb-2"
                       >
-                        Telephone
+                        Téléphone
                       </label>
                       <input
                         type="tel"
@@ -159,13 +159,16 @@ export default function ContactPage() {
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[#31CC71] focus:border-transparent appearance-none"
                       >
                         <option value="" disabled className="text-gray-900">
-                          Selectionner un sujet
+                          Sélectionner un sujet
                         </option>
                         <option value="yonima" className="text-gray-900">
                           Yonima
                         </option>
                         <option value="skoolbi" className="text-gray-900">
                           Skoolbi
+                        </option>
+                        <option value="senwaapi" className="text-gray-900">
+                          SenWaAPI
                         </option>
                         <option value="partenariat" className="text-gray-900">
                           Partenariat
@@ -213,7 +216,7 @@ export default function ContactPage() {
             <div className="lg:col-span-2">
               <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                 <h3 className="text-lg font-semibold text-[#1F492E] mb-6">
-                  Nos coordonnees
+                  Nos coordonnées
                 </h3>
                 <div className="space-y-5">
                   <div className="flex items-center gap-3">
@@ -237,7 +240,7 @@ export default function ContactPage() {
                       <MapPin className="h-5 w-5 text-[#31CC71]" />
                     </div>
                     <span className="text-gray-700 text-sm">
-                      Dakar, Senegal
+                      Dakar, Sénégal
                     </span>
                   </div>
                 </div>
