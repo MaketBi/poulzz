@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Informations legales — Poulzz / Yonima",
   description:
-    "Centre des informations legales de Poulzz (POULZZ SUARL) : mentions legales, CGU/CGV, confidentialite, KYC, LCB-FT, securite des transactions, charte d'utilisation, remboursement, retour et annulation.",
+    "Centre des informations legales de Poulzz (POULZZ SUARL) : mentions legales, CGU/CGV, confidentialite, KYC, LCB-FT, securite des transactions, charte d'utilisation, remboursement, retour, annulation et types de produits vendus.",
 };
 
 const documents = [
@@ -48,6 +48,12 @@ const documents = [
     href: "/legal/charte-utilisation",
     title: "Charte d'utilisation responsable",
     description: "Regles de bon usage de l'Application et signalement des abus.",
+  },
+  {
+    href: "/legal/produits-services",
+    title: "Types de services et produits vendus",
+    description:
+      "Nature du service, categories de produits alimentaires et produits exclus de la plateforme.",
   },
   {
     href: "/legal/remboursement",
