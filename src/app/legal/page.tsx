@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Informations legales — Poulzz / Yonima",
   description:
-    "Centre des informations legales de Poulzz (POULZZ SUARL) : mentions legales, CGU/CGV, confidentialite, KYC, LCB-FT, securite des transactions et charte d'utilisation.",
+    "Centre des informations legales de Poulzz (POULZZ SUARL) : mentions legales, CGU/CGV, confidentialite, KYC, LCB-FT, securite des transactions, charte d'utilisation, remboursement, retour et annulation.",
 };
 
 const documents = [
@@ -48,6 +48,30 @@ const documents = [
     href: "/legal/charte-utilisation",
     title: "Charte d'utilisation responsable",
     description: "Regles de bon usage de l'Application et signalement des abus.",
+  },
+  {
+    href: "/legal/remboursement",
+    title: "Conditions de remboursement",
+    description:
+      "Cas ouvrant droit a remboursement, cas exclus, moyen et delai de remboursement.",
+  },
+  {
+    href: "/legal/retour",
+    title: "Conditions de retour",
+    description:
+      "Constat a la livraison, produits perissables non repris et reprise des articles non alimentaires.",
+  },
+  {
+    href: "/legal/annulation",
+    title: "Conditions d'annulation",
+    description:
+      "Annulation par le Client, par le Vendeur ou par Yonima, et consequences financieres.",
+  },
+  {
+    href: "/legal/reclamations",
+    title: "Politique de remboursement et reclamations",
+    description:
+      "Canal de saisine, delai de 48 heures, pieces a fournir et traitement de la reclamation.",
   },
 ];
 

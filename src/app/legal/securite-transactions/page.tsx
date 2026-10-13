@@ -225,8 +225,9 @@ export default function SecuriteTransactionsPage() {
       <p>
         Les modalites de <strong>remboursement</strong> (cas ouvrant droit a
         remboursement, delais, moyen de remboursement) sont definies dans les{" "}
-        <a href="/terms">CGU/CGV (&sect;9)</a>, auxquelles la presente Politique
-        renvoie. En synthese, le Client beneficie d&apos;un <strong>remboursement
+        <a href="/terms/client">CGU/CGV (&sect;9)</a> et dans les{" "}
+        <a href="/legal/remboursement">conditions de remboursement</a>,
+        auxquelles la presente Politique renvoie. En synthese, le Client beneficie d&apos;un <strong>remboursement
         integral</strong> en cas de refus, d&apos;annulation ou de non-conformite
         imputable a Yonima ou au Vendeur, sur reclamation formee dans les 48
         heures, le remboursement etant effectue vers le moyen de paiement

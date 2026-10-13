@@ -544,6 +544,17 @@ export default function TermsClientPage() {
 
       <h2 id="chapitre-9">9. Annulations, retours et remboursements</h2>
 
+      <p>
+        Les modalites decrites dans le present chapitre font egalement
+        l&apos;objet de documents dedies, publies a des fins de lisibilite et de
+        conformite : <a href="/legal/remboursement">conditions de
+        remboursement</a>, <a href="/legal/retour">conditions de retour</a>,{" "}
+        <a href="/legal/annulation">conditions d&apos;annulation</a> et{" "}
+        <a href="/legal/reclamations">politique de remboursement et
+        reclamations</a>. Le present chapitre demeure la{" "}
+        <strong>source contractuelle de reference</strong>.
+      </p>
+
       <h3>9.1. Principe - remboursement integral en cas de manquement de Yonima ou du Vendeur</h3>
       <p>
         En cas de <strong>manquement avere</strong> de Yonima ou du Vendeur
