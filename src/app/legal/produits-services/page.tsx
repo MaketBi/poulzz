@@ -119,6 +119,13 @@ export default function ProduitsServicesPage() {
         Les frais applicables (frais de livraison, frais de service) sont
         affiches au Client <strong>avant la confirmation</strong> de sa commande.
       </p>
+      <p>
+        Le Client regle sa commande soit par <strong>paiement
+        electronique</strong> (carte bancaire, Wave, Orange Money / Maxit), soit
+        en <strong>especes a la livraison</strong>. Les moyens de paiement
+        acceptes et leurs restrictions sont detailles aux{" "}
+        <a href="/terms/client">CGU/CGV &sect;7</a>.
+      </p>
 
       <h2 id="chapitre-5">5. Produits et services exclus</h2>
       <p>
@@ -135,8 +142,7 @@ export default function ProduitsServicesPage() {
         <li><strong>Jeux d&apos;argent</strong>, paris, loteries et jeux de hasard.</li>
         <li><strong>Contenus et produits pour adultes</strong>.</li>
         <li><strong>Produits dematerialises</strong> : recharges telephoniques, cartes prepayees, cartes-cadeaux, codes et abonnements numeriques, crypto-actifs.</li>
-        <li><strong>Services financiers</strong>, transfert d&apos;argent, change de devises et credit.</li>
-        <li><strong>Especes</strong> et instruments monetaires, sous quelque forme que ce soit.</li>
+        <li><strong>Services financiers</strong> : transfert d&apos;argent, change manuel, vente de devises, credit et instruments monetaires.</li>
         <li><strong>Animaux vivants</strong>.</li>
         <li><strong>Produits contrefaits</strong> ou portant atteinte a des droits de propriete intellectuelle.</li>
         <li><strong>Tout produit dont la vente ou la livraison est interdite</strong> par la reglementation senegalaise applicable.</li>
