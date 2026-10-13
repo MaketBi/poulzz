@@ -30,9 +30,7 @@ export default function RemboursementPage() {
       ]}
     >
       <p className="text-sm text-[#1F492E]/60 italic">
-        Document valide en interne par le PO et les equipes Yonima. Une
-        validation juridique externe par un avocat senegalais est prevue avant
-        le lancement public V1.
+        Document valide en interne par le PO et les equipes Yonima.
       </p>
 
       <h2 id="preambule">Preambule</h2>
