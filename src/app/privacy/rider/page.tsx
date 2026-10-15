@@ -11,8 +11,8 @@ export default function PrivacyRiderPage() {
     <LegalPageShell
       title="Politique de confidentialite"
       appLabel="Yonima Rider - Livreur"
-      version="1.0"
-      lastUpdated="2026-05-12"
+      version="1.1"
+      lastUpdated="2026-10-15"
       otherVersions={[
         { href: "/privacy/client", label: "Politique de confidentialite - Yonima Plus (Client)" },
         { href: "/privacy/business", label: "Politique de confidentialite - Yonima Business (Vendeur)" },
@@ -210,7 +210,7 @@ export default function PrivacyRiderPage() {
             <td>Coordonner la remise</td>
           </tr>
           <tr>
-            <td><strong>PayDunya</strong> (PSP)</td>
+            <td><strong>PayDunya</strong> (PSP, selon le moyen de versement utilise)</td>
             <td>Reference transaction, montant</td>
             <td>Versements</td>
           </tr>
@@ -226,8 +226,19 @@ export default function PrivacyRiderPage() {
           </tr>
           <tr>
             <td><strong>PostHog</strong></td>
-            <td>Evenements anonymises</td>
-            <td>Analytics produit</td>
+            <td>
+              Nom, prenom, numero de telephone, identifiant livreur, evenements
+              d&apos;usage de l&apos;application
+            </td>
+            <td>Analytics produit et amelioration du service</td>
+          </tr>
+          <tr>
+            <td><strong>Firebase Crashlytics</strong> (Google)</td>
+            <td>
+              Nom, prenom, numero de telephone, identifiant livreur, rapports de
+              plantage et d&apos;erreur
+            </td>
+            <td>Diagnostic des plantages et fiabilite de l&apos;application</td>
           </tr>
           <tr>
             <td><strong>Autorites judiciaires ou administratives</strong></td>
@@ -314,7 +325,14 @@ export default function PrivacyRiderPage() {
       <ul>
         <li>Identifiant push (FCM / APNs)</li>
         <li>Identifiant publicitaire si permission accordee</li>
-        <li>PostHog pour l&apos;analytics anonymise</li>
+        <li>
+          PostHog pour l&apos;analytics produit, avec identification du livreur
+          (nom et numero de telephone)
+        </li>
+        <li>
+          Firebase Crashlytics pour le diagnostic des plantages, avec
+          identification du livreur (nom et numero de telephone)
+        </li>
         <li>Aucun cookie publicitaire tiers</li>
       </ul>
 
@@ -332,8 +350,17 @@ export default function PrivacyRiderPage() {
 
       <h2 id="chapitre-9">9. Transferts hors Senegal</h2>
       <p>
-        Sous-traitants identiques (Google Maps US, PostHog UE, Supabase selon
-        region). Garanties via clauses contractuelles types.
+        Certaines donnees du Livreur sont transferees hors du Senegal vers nos
+        sous-traitants : <strong>Google Maps</strong> (Etats-Unis),{" "}
+        <strong>PostHog</strong> (Etats-Unis, instance Cloud US),{" "}
+        <strong>Firebase Crashlytics</strong> (Google, Etats-Unis) et{" "}
+        <strong>Supabase</strong> (selon la region d&apos;hebergement).
+      </p>
+      <p>
+        Les transferts vers PostHog et Firebase Crashlytics incluent le nom, le
+        prenom et le numero de telephone du Livreur. Ces transferts sont encadres
+        par les clauses contractuelles types et par les engagements de protection
+        des donnees de ces prestataires.
       </p>
 
       <h2 id="chapitre-10">10. Modifications</h2>
